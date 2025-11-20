@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import TourCards from "./TourCardsCompo";
 
 export default function DubaiTourPackageCompo() {
   const tips = [
@@ -15,16 +16,16 @@ export default function DubaiTourPackageCompo() {
     <div className="w-full flex flex-col gap-10 px-3 md:px-5 lg:px-12 bg-gray-50">
 
       {/* Hero Section with Title Overlay */}
-      <div className="relative w-full">
+      <div className="relative w-full pt-5">
         <h1
-          className="absolute top-10 md:top-20 lg:top-40 left-1/2 -translate-x-1/2 
+          className="absolute top-15 md:top-20 lg:top-40 left-1/2 -translate-x-1/2 
           text-gray-100/80 font-bold text-2xl md:text-4xl lg:text-5xl text-center"
         >
           Dubai Tour Packages
         </h1>
 
         <Image
-          className="w-full h-auto object-cover"
+          className="w-full h-auto object-cover max-h-[400px]"
           src="/img/Dubai.jpg"
           alt="Dubai image"
           width={1280}
@@ -32,8 +33,8 @@ export default function DubaiTourPackageCompo() {
         />
       </div>
 
-      {/* Content Section */}
-      <div className="w-full lg:mx-20 space-y-10">
+      {/* Content Section1 */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 2xl:px-32 space-y-10">
 
         {/* Desert Safari Image + Title */}
         <div className="w-full overflow-hidden">
@@ -41,11 +42,16 @@ export default function DubaiTourPackageCompo() {
             Desert Safari
           </h1>
 
-          <img
-            className="w-full rounded-lg px-2 md:px-4 lg:px-6 py-2 md:py-4 lg:py-6 object-cover"
-            src="/img/img1.jpg"
-            alt="Dubai image-1"
-          />
+          <div className="p-2 md:p-4 lg:p-6">
+            <Image
+              src="/img/img1.JPG"
+              alt="Dubai image-1"
+              className="w-full rounded-lg object-cover object-bottom-left max-h-[600px]"
+              width={1200}
+              height={500}
+            />
+          </div>
+
         </div>
 
         {/* Text Content */}
@@ -101,7 +107,7 @@ export default function DubaiTourPackageCompo() {
                 <li
                   key={index}
                   className="relative pl-7 text-sm md:text-base leading-relaxed 
-                  before:absolute before:left-0 before:top-2 before:h-4 before:w-4 
+                  before:absolute md:before:left-0 md:before:top-1 lg:before:left-0 lg:before:top-1 before:left-0 before:top-2 before:h-4 before:w-4 
                   before:bg-blue-600 before:rounded-full"
                 >
                   {tip}
@@ -137,6 +143,164 @@ export default function DubaiTourPackageCompo() {
           </div>
 
         </div>
+      </div>
+
+      {/*Content Section2 */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 2xl:px-32 space-y-10">
+
+
+        {/* Desert Safari Image + Title */}
+        <div className="w-full overflow-hidden">
+          <h1 className="text-black font-semibold text-2xl md:text-3xl mb-4">
+            Cruise Marina
+          </h1>
+          <div className="p-2 md:p-4 lg:p-6">
+            <Image
+              src="/img/img2.JPG"
+              alt="Dubai image-2"
+              className="w-full rounded-lg object-cover object-bottom-left max-h-[600px]"
+              width={1200}
+              height={500}
+            />
+          </div>
+
+        </div>
+
+
+        <div className="space-y-8 text-gray-900">
+
+          {/* Section Title */}
+          <h1 className="text-2xl md:text-3xl font-semibold">
+            About Marina Dhow Cruise
+          </h1>
+
+          {/* Pickup & Drop-off */}
+          <div>
+            <h2 className="text-xl md:text-2xl font-semibold mb-2">
+              Convenient Pickup and Drop-off
+            </h2>
+            <p className="text-sm md:text-base leading-relaxed">
+              Experience hassle-free transportation with comfortable vehicles from your
+              home, workplace, or any other location in Sharjah or Dubai with our pickup
+              and drop-off services.
+            </p>
+          </div>
+
+          {/* Cruise Duration */}
+          <div>
+            <h2 className="text-xl md:text-2xl font-semibold mb-2">
+              Cruise Duration
+            </h2>
+            <p className="text-sm md:text-base leading-relaxed">
+              The cruise lasts about 2 hours, giving you plenty of time to explore
+              Dubai Marina and enjoy its stunning surroundings.
+            </p>
+          </div>
+
+          {/* Booking Recommendations */}
+          <div>
+            <h2 className="text-xl md:text-2xl font-semibold mb-2">
+              Booking Recommendations
+            </h2>
+            <p className="text-sm md:text-base leading-relaxed">
+              We recommend booking your cruise directly with Regal Travel Agency to
+              avoid additional charges from middlemen. Our packages start at only
+              <span className="font-semibold"> 150 dirhams</span>, ensuring excellent
+              value and high-quality service.
+            </p>
+          </div>
+
+          {/* Book Your Experience */}
+          <div>
+            <h2 className="text-xl md:text-2xl font-semibold mb-2">
+              Book Your Experience Today
+            </h2>
+            <p className="text-sm md:text-base leading-relaxed">
+              Whether you’re trying a dhow cruise for the first time or returning for
+              another experience, Regal Travel Agency ensures a memorable and
+              enjoyable evening. Contact us anytime to arrange this exceptional
+              experience. We look forward to welcoming you aboard and helping you
+              create unforgettable memories on your Dubai Marina dhow cruise.
+            </p>
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+      {/*Content Section3 */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 2xl:px-32 space-y-10">
+
+
+        {/* Desert Safari Image + Title */}
+        <div className="w-full overflow-hidden">
+          <h1 className="text-black font-semibold text-2xl md:text-3xl mb-4">
+            Whole UAE One-Day Tour
+          </h1>
+          <div className="inline-grid gap-5">
+            <div className="text-white bg-gray-900 inline p-2">Pick-up Time: 07:00 Am</div>
+            <div className="text-white bg-gray-900 inline p-2">Drop-off Time: 10:00 pm</div>
+          </div>
+          <div className="p-2 md:p-4 lg:p-6">
+            <Image
+              src="/img/img3.JPG"
+              alt="Dubai image-2"
+              className="w-full rounded-lg object-cover object-bottom-left max-h-[600px]"
+              width={1200}
+              height={500}
+            />
+          </div>
+        </div>
+
+        <div className="space-y-8 text-gray-900">
+          <TourCards />
+        </div>
+
+      </div>
+
+      {/*Content Section4 */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 2xl:px-32 space-y-10">
+        <h1 className="text-black font-semibold text-2xl md:text-3xl mb-4">
+          How do I book my Dubai tour package?
+        </h1>
+        <ul className="text-sm text-gray-800 space-y-2 list-disc list-inside">
+          <li>
+            Contact us via Call / WhatsApp at <span className="font-semibold">+971 000 0000</span> or email us at
+            <span className="font-semibold"> info@dreamconnect.com</span> to reserve your Dubai tour package.
+          </li>
+          <li>
+            Please make sure to mention <span className="italic">&quot;Dubai Tour Package&quot;</span> while booking.
+          </li>
+        </ul>
+
+        <h1 className="text-black font-semibold text-2xl md:text-3xl mb-4">
+          How can i pay for my Dubai Tour Packages?
+        </h1>
+        <ul className="text-sm text-gray-800 space-y-2 list-disc list-inside">
+          <li>
+            Once we receive your booking request, we’ll send you available online and offline payment options.
+          </li>
+          <li>
+            We accept all major online payments including credit and debit cards.
+          </li>
+        </ul>
+
+        <h1 className="text-black font-semibold text-2xl md:text-3xl mb-4">
+          Any More Questions?
+        </h1>
+        <ul className="text-sm text-gray-800 space-y-2 list-disc list-inside">
+          <li>
+            If you need more information or assistance, feel free to call us anytime.
+          </li>
+          <li>
+            All emails are responded to within a maximum of 2 business hours.
+          </li>
+          <li>
+            You can also use the inquiry form on this page to reach out to us.
+          </li>
+        </ul>
       </div>
     </div>
   );
