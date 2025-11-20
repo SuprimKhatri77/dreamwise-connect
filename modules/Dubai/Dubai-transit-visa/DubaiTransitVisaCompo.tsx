@@ -44,7 +44,7 @@ export default function DubaiTransitVisaCompo() {
             <h1 className="font-semibold text-2xl md:text-3xl mb-2">
               Dubai Transit Visa Guide
             </h1>
-            <div className="max-w-4xl mx-auto space-y-6">
+            <div className="w-full mx-auto space-y-6">
               {/* Description */}
               <p className="text-sm md:text-base text-gray-800 leading-relaxed">
                 A Dubai transit visa allows travelers with a layover in the UAE to enter the country for a short stay.
