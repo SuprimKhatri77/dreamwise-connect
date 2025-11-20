@@ -13,7 +13,7 @@ export function StickyContactWidget({
   heading = "Need Help?",
   description = "Get in touch with our visa consultants via WhatsApp",
 }: StickyContactWidgetProps) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   const handleWhatsAppClick = () => {

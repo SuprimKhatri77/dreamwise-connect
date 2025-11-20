@@ -52,10 +52,13 @@ export function Navbar() {
             </a>
 
             <div className="relative group">
-              <button className="flex items-center gap-1 text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link
+                href="/visa-and-services"
+                className="flex items-center gap-1 text-gray-700 hover:text-blue-600 transition-colors font-medium"
+              >
                 Visa & Services
                 <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
-              </button>
+              </Link>
 
               <div className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 -translate-y-2">
                 <div className="relative group/nested">

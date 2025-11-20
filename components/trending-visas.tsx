@@ -155,9 +155,7 @@ export function TrendingVisas() {
                 </p>
 
                 <Link
-                  href={`/${visa.country
-                    .toLowerCase()
-                    .replace(/\s+/g, "-")}-visa`}
+                  href={`/${visa.country.toLowerCase().replace(/\s+/g, "-")}`}
                 >
                   <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold group/btn rounded-xl transition-all duration-300 shadow-md hover:shadow-lg">
                     <span>Apply Now</span>

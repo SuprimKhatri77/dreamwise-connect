@@ -7,8 +7,7 @@ export function Hero() {
       <div
         className="absolute inset-0 opacity-30"
         style={{
-          backgroundImage:
-            "url(/placeholder.svg?height=700&width=1400&query=world-map-travel-concept)",
+          backgroundImage: "url(/hero-bg.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
