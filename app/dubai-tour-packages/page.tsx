@@ -4,8 +4,10 @@ import DubaiTourPackageCompo from "@/modules/Dubai-tour-packages/DubaiTourPackag
 export default function DubaiTourPackage() {
   return (
     <>
-      <DNavbar />
-      <DubaiTourPackageCompo />
+      <div className="min-h-screen">
+        <DNavbar />
+        <DubaiTourPackageCompo />
+      </div>
     </>
   );
 }
