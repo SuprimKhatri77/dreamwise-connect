@@ -9,12 +9,16 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileVisaOpen, setMobileVisaOpen] = useState(false);
   const [mobileDubaiOpen, setMobileDubaiOpen] = useState(false);
+  const [mobileUKOpen, setMobileUKOpen] = useState(false);
+  const [mobileUSAOpen, setMobileUSAOpen] = useState(false);
   const [mobileTourOpen, setMobileTourOpen] = useState(false);
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
     setMobileVisaOpen(false);
     setMobileDubaiOpen(false);
+    setMobileUSAOpen(false);
+    setMobileUKOpen(false);
     setMobileTourOpen(false);
   };
 
@@ -44,12 +48,12 @@ export function Navbar() {
               Home
             </Link>
 
-            <a
+            <Link
               href="/about"
               className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
             >
               About Us
-            </a>
+            </Link>
 
             <div className="relative group">
               <Link
@@ -68,51 +72,87 @@ export function Navbar() {
                   </button>
 
                   <div className="absolute right-full top-0 mr-1 w-56 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-200">
-                    <a
+                    <Link
                       href="/dubai-transit-visa"
                       className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 text-sm border-b border-gray-100"
                     >
                       Dubai Transit Visa
-                    </a>
-                    <a
-                      href="/3-month-uae-visa"
+                    </Link>
+                    <Link
+                      href="/dubai-tour-packages"
                       className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 text-sm border-b border-gray-100"
                     >
-                      3-Month UAE Visa
-                    </a>
-                    <a
-                      href="/6-month-uae-visa"
-                      className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 text-sm"
-                    >
-                      6-Month UAE Visa
-                    </a>
+                      Dubai Tour Packages
+                    </Link>
                   </div>
                 </div>
 
-                <a
-                  href="/turkey-visa"
+                <Link
+                  href="/australia-visa"
                   className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 font-medium border-b border-gray-100"
                 >
-                  Turkey Visa
-                </a>
-                <a
-                  href="/schengen-visa"
+                  Australia Visa
+                </Link>
+                <Link
+                  href="/europe-visa"
                   className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 font-medium border-b border-gray-100"
                 >
-                  Schengen Visa
-                </a>
-                <a
-                  href="/uk-visa"
-                  className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 font-medium border-b border-gray-100"
-                >
-                  UK Visa
-                </a>
-                <a
-                  href="/us-visa"
-                  className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 font-medium"
-                >
-                  US Visa
-                </a>
+                  Europe Visa
+                </Link>
+                <div className="relative group/nested">
+                  <button className="w-full text-left px-5 py-3 hover:bg-blue-50 transition-colors flex items-center justify-between text-gray-700 font-medium border-b border-gray-100">
+                    UK Visa
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+
+                  <div className="absolute right-full top-0 mr-1 w-56 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-200">
+                    <Link
+                      href="/uk-domestic-worker-visa"
+                      className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 text-sm border-b border-gray-100"
+                    >
+                      UK Domestic Worker Visa
+                    </Link>
+                    <Link
+                      href="/uk-visa-from-dubai-for-uae-residents"
+                      className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 text-sm border-b border-gray-100"
+                    >
+                      UK Visa from Dubai
+                    </Link>
+                  </div>
+                </div>
+                <div className="relative group/nested">
+                  <button className="w-full text-left px-5 py-3 hover:bg-blue-50 transition-colors flex items-center justify-between text-gray-700 font-medium border-b border-gray-100">
+                    USA Visa
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+
+                  <div className="absolute right-full top-0 mr-1 w-56 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-200">
+                    <Link
+                      href="/usa-travel-authorization"
+                      className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 text-sm border-b border-gray-100"
+                    >
+                      USA Travel Authorization
+                    </Link>
+                    <Link
+                      href="/usa-urgent-visa-appointments"
+                      className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 text-sm border-b border-gray-100"
+                    >
+                      USA Urgent Visa
+                    </Link>
+                    <Link
+                      href="/usa-visa-from-dubai"
+                      className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 text-sm border-b border-gray-100"
+                    >
+                      USA Visa From Dubai
+                    </Link>
+                    <Link
+                      href="/usa-visa-renewal-for-uae-residents"
+                      className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 text-sm border-b border-gray-100"
+                    >
+                      USA Visa Renewal
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -123,40 +163,21 @@ export function Navbar() {
               </button>
 
               <div className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 -translate-y-2">
-                <a
-                  href="/europe-tour"
+                <Link
+                  href="/world-wide-tour"
                   className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 font-medium border-b border-gray-100"
                 >
-                  Europe Tour Package
-                </a>
-                <a
-                  href="/uae-tour"
-                  className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 font-medium border-b border-gray-100"
-                >
-                  UAE Tour Package
-                </a>{" "}
-                {/* Mobile Tour Packages */}
-                <a
-                  href="/southeast-asia"
-                  className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 font-medium border-b border-gray-100"
-                >
-                  Southeast Asia Package
-                </a>
-                <a
-                  href="/maldives-honeymoon"
-                  className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 font-medium"
-                >
-                  Maldives Honeymoon
-                </a>
+                  World Wide Tour
+                </Link>
               </div>
             </div>
 
-            <a
+            <Link
               href="/contact"
               className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
 
           <button
@@ -244,59 +265,116 @@ old text-gray-600"
 
                       {mobileDubaiOpen && (
                         <div className="ml-4 mt-1 space-y-1">
-                          <a
+                          <Link
                             href="/dubai-transit-visa"
                             className="block px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
                             onClick={closeMobileMenu}
                           >
                             Dubai Transit Visa
-                          </a>
-                          <a
-                            href="/3-month-uae-visa"
+                          </Link>
+                          <Link
+                            href="/dubai-tour-packages"
                             className="block px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
                             onClick={closeMobileMenu}
                           >
-                            3-Month UAE Visa
-                          </a>
-                          <a
-                            href="/6-month-uae-visa"
-                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
-                            onClick={closeMobileMenu}
-                          >
-                            6-Month UAE Visa
-                          </a>
+                            Dubai Tour Packages
+                          </Link>
                         </div>
                       )}
                     </div>
 
-                    <a
-                      href="/turkey-visa"
+                    <Link
+                      href="/australia-visa"
                       className="block px-4 py-2 text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
                       onClick={closeMobileMenu}
                     >
-                      Turkey Visa
-                    </a>
-                    <a
-                      href="/schengen-visa"
+                      Australia Visa
+                    </Link>
+                    <Link
+                      href="/europe-visa"
                       className="block px-4 py-2 text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
                       onClick={closeMobileMenu}
                     >
-                      Schengen Visa
-                    </a>
-                    <a
-                      href="/uk-visa"
-                      className="block px-4 py-2 text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      UK Visa
-                    </a>
-                    <a
-                      href="/us-visa"
-                      className="block px-4 py-2 text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      US Visa
-                    </a>
+                      Europe Visa
+                    </Link>
+                    <div>
+                      <button
+                        onClick={() => setMobileUKOpen(!mobileUKOpen)}
+                        className="w-full flex items-center justify-between px-4 py-2 text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
+                      >
+                        UK Visa
+                        <ChevronDown
+                          className={`w-4 h-4 transition-transform ${
+                            mobileUKOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+
+                      {mobileUKOpen && (
+                        <div className="ml-4 mt-1 space-y-1">
+                          <Link
+                            href="/uk-domestic-worker-visa"
+                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
+                            onClick={closeMobileMenu}
+                          >
+                            UK Domestic Worker Visa
+                          </Link>
+                          <Link
+                            href="/uk-visa-from-dubai-for-uae-residents"
+                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
+                            onClick={closeMobileMenu}
+                          >
+                            UK Visa from Dubai
+                          </Link>
+                        </div>
+                      )}
+                    </div>
+                    <div>
+                      <button
+                        onClick={() => setMobileUSAOpen(!mobileUSAOpen)}
+                        className="w-full flex items-center justify-between px-4 py-2 text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
+                      >
+                        US Visa
+                        <ChevronDown
+                          className={`w-4 h-4 transition-transform ${
+                            mobileUSAOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+
+                      {mobileUSAOpen && (
+                        <div className="ml-4 mt-1 space-y-1">
+                          <Link
+                            href="/usa-travel-authorization"
+                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
+                            onClick={closeMobileMenu}
+                          >
+                            USA Travel Authorization
+                          </Link>
+                          <Link
+                            href="/usa-visa-from-dubai"
+                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
+                            onClick={closeMobileMenu}
+                          >
+                            USA Visa from Dubai
+                          </Link>
+                          <Link
+                            href="/usa-urgent-visa-appoointments"
+                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
+                            onClick={closeMobileMenu}
+                          >
+                            USA Urgent Visa
+                          </Link>
+                          <Link
+                            href="/usa-visa-renewal-for-uae-residents"
+                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
+                            onClick={closeMobileMenu}
+                          >
+                            USA Visa Renewal
+                          </Link>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 )}
               </div>
@@ -316,34 +394,13 @@ old text-gray-600"
 
                 {mobileTourOpen && (
                   <div className="ml-4 mt-1 space-y-1">
-                    <a
-                      href="/europe-tour"
+                    <Link
+                      href="/world-wide-tour"
                       className="block px-4 py-2 text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
                       onClick={closeMobileMenu}
                     >
-                      Europe Tour Package
-                    </a>
-                    <a
-                      href="/uae-tour"
-                      className="block px-4 py-2 text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      UAE Tour Package
-                    </a>
-                    <a
-                      href="/southeast-asia"
-                      className="block px-4 py-2 text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Southeast Asia Package
-                    </a>
-                    <a
-                      href="/maldives-honeymoon"
-                      className="block px-4 py-2 text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Maldives Honeymoon
-                    </a>
+                      World Wide Tour
+                    </Link>
                   </div>
                 )}
               </div>
