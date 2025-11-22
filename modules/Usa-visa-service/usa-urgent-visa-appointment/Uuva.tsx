@@ -1,5 +1,7 @@
-import React from "react";
+
 export default function USAUrgentVisa() {
+  const phone = "+971502315207";
+  const email = "info@dreamwiseconnect.com";
   return (
     <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 2xl:px-32 space-y-10 text-black">
       {/* Title */}
@@ -107,9 +109,9 @@ export default function USAUrgentVisa() {
       </p>
 
       <div className="mt-4 space-y-1 text-gray-900">
-        <p><span className="font-semibold">Call / WhatsApp:</span> +971502315207</p>
+        <p><span className="font-semibold">Call / WhatsApp:</span> {phone}</p>
         <p><span className="font-semibold">Office:</span> +97142635 888</p>
-        <p><span className="font-semibold">Email:</span> info@dreamwiseconnect.com</p>
+        <p><span className="font-semibold">Email:</span> {email}</p>
       </div>
     </section>
   );

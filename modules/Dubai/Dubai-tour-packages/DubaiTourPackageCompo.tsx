@@ -4,6 +4,8 @@ import Image from "next/image";
 import TourCards from "./TourCardsCompo";
 
 export default function DubaiTourPackageCompo() {
+  const phone = "+971502315207";
+  const email = "info@dreamwiseconnect.com";
   const tips = [
     "Dress comfortably for the desert weather and don’t forget sunscreen and sunglasses.",
     "Keep drinking water throughout the journey to stay hydrated.",
@@ -267,8 +269,8 @@ export default function DubaiTourPackageCompo() {
         </h1>
         <ul className="text-sm text-gray-800 space-y-2 list-disc list-inside">
           <li>
-            Contact us via Call / WhatsApp at <span className="font-semibold">+971 000 0000</span> or email us at
-            <span className="font-semibold"> info@dreamconnect.com</span> to reserve your Dubai tour package.
+            Contact us via Call / WhatsApp at <span className="font-semibold"> {phone}</span> or email us at
+            <span className="font-semibold"> {email}</span> to reserve your Dubai tour package.
           </li>
           <li>
             Please make sure to mention <span className="italic">&quot;Dubai Tour Package&quot;</span> while booking.

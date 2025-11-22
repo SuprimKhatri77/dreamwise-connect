@@ -4,6 +4,9 @@ import { CheckCircle } from "lucide-react";
 import Image from "next/image";
 
 export default function DubaiTransitVisaCompo() {
+  const phone = "+971502315207";
+  const email = "info@dreamwiseconnect.com";
+
   return (
     <div className="w-full flex flex-col gap-10 px-3 md:px-5 lg:px-12 bg-gray-50">
       <div className="relative w-full pt-5">
@@ -214,8 +217,8 @@ export default function DubaiTransitVisaCompo() {
             </h2>
 
             <ul className="space-y-3 text-gray-800 text-sm md:text-base">
-              <li>1. Send your passport copy, photo, and airline ticket via WhatsApp: <span className="font-semibold">+971502315207</span></li>
-              <li>2. Or email us at: <span className="font-semibold">info@dreamwiseconnect.com</span></li>
+              <li>1. Send your passport copy, photo, and airline ticket via WhatsApp: <span className="font-semibold">{phone}</span></li>
+              <li>2. Or email us at: <span className="font-semibold">{email}</span></li>
               <li>3. Once approved, you will receive your visa in PDF format.</li>
             </ul>
           </div>

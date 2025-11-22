@@ -2,6 +2,8 @@
 import React from "react";
 
 const UsVisaRenewal = () => {
+  const phone = "+971502315207";
+  const email = "info@regaluae.com";
   const faqs = [
     {
       q: "What is the cost of renewing a US visa in Dubai?",
@@ -142,9 +144,9 @@ const UsVisaRenewal = () => {
           </p>
 
           <div className="mt-4 space-y-1">
-            <p><strong>WhatsApp:</strong> +971 50 231 5207</p>
+            <p><strong>WhatsApp:</strong> {phone}</p>
             <p><strong>Office:</strong> +971 4 2635 888</p>
-            <p><strong>Email:</strong> info@regaluae.com</p>
+            <p><strong>Email:</strong> {email}</p>
           </div>
         </section>
       </div>

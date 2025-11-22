@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 
 export default function ESTAServicePage() {
@@ -7,6 +8,10 @@ export default function ESTAServicePage() {
     title: "Electronic System For Travel Authorization",
     price: "AED 650",
   };
+
+  const phone = "+971502315207";
+  const email = "info@dreamwiseconnect.com";
+
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 2xl:px-32 space-y-10 text-black">
@@ -24,6 +29,17 @@ export default function ESTAServicePage() {
       {/* Section Wrapper */}
       <div className="mt-10 space-y-10">
 
+        <div className="w-full overflow-hidden flex justify-start ">
+          <div className="mx-auto">
+            <Image
+              src="/img/electronicauth.svg"
+              alt="Dubai visa"
+              className="w-full rounded-lg object-cover object-bottom-left max-h-[400px]"
+              width={1200}
+              height={500}
+            />
+          </div>
+        </div>
         {/* Intro Section */}
         <section className="space-y-3">
           <h2 className="text-xl font-semibold text-blue-600">
@@ -121,10 +137,10 @@ export default function ESTAServicePage() {
           </h2>
           <p className="text-gray-700 mt-2">
             Send your documents via WhatsApp:{" "}
-            <span className="font-semibold">+971502315207</span>
+            <span className="font-semibold">{phone}</span>
             <br />
             or email:{" "}
-            <span className="font-semibold">info@regaluae.com</span>
+            <span className="font-semibold">{email}</span>
           </p>
         </section>
 
