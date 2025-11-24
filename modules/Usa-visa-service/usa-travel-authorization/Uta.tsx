@@ -13,7 +13,7 @@ export default function ESTAServicePage() {
   const email = "info@dreamwiseconnect.com";
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 2xl:px-32 space-y-10 text-black py-10">
+    <div className="w-full max-w-5xl mx-auto px-3 md:px-5 lg:px-12 space-y-10 text-black py-10">
       {/* Title */}
       <div className="text-center space-y-2">
         <h1 className="text-2xl md:text-4xl font-bold p-2 sm:p-5">

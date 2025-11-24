@@ -245,3 +245,44 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* CardShine.css */
+
+/* Define the animation: moves the shine gradient from left to right */
+@keyframes shine-animation {
+  0% {
+    transform: translateX(-100%) rotate(25deg);
+  }
+  100% {
+    transform: translateX(200%) rotate(25deg);
+  }
+}
+
+/* The shine overlay element */
+.shine-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Use a transparent to white gradient for the shine effect */
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    /* Peak brightness of the shine */ rgba(255, 255, 255, 0) 100%
+  );
+  /* Initially place the shine off-screen to the left */
+  transform: translateX(-100%) rotate(25deg);
+  /* The transition property ensures the animation is smooth */
+  transition: opacity 0.3s ease-in-out;
+  /* Pointer events are set to none so the shine doesn't block clicks */
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* The hover state: activates the animation */
+.card-container:hover .shine-overlay {
+  opacity: 1; /* Make the shine visible */
+  animation: shine-animation 1.2s ease-in-out; /* Run the animation */
+}

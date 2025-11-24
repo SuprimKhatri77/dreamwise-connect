@@ -1,33 +1,39 @@
+"use client"
 import Image from "next/image";
 
 export default function DubaiServices() {
   const services = [
     {
       title: "Visit Visa",
+      img: "/img/Visit-visa.jpg",
       description:
         "Apply for short-term or long-term Dubai visit visas with fast processing and expert documentation support.",
       price: "AED 350",
     },
     {
       title: "Business Visa",
+      img: "/img/business-visa.jpg",
       description:
         "Ideal for entrepreneurs, business travelers, and investors who need smooth entry for meetings or business activities.",
       price: "AED 650",
     },
     {
       title: "Setup Business",
+      img: "/img/setup-business.jpg",
       description:
         "We assist in Mainland, Free-zone, and Offshore company formation with quick approvals and professional guidance.",
       price: "From AED 5,500",
     },
     {
       title: "Golden Visa",
+      img: "/img/golden-visa.jpg",
       description:
         "Long-term residency visa for investors, professionals, and talented individuals who qualify under UAE Golden Visa rules.",
       price: "AED 3,500",
     },
     {
       title: "Your Package",
+      img: "/img/your-package.jpg",
       description:
         "Customize your travel or business service package according to your preferred duration, purpose, and budget.",
       price: "Flexible",
@@ -36,10 +42,10 @@ export default function DubaiServices() {
 
   return (
     <div>
-      <section className="max-w-5xl mx-auto px-4 mt-20">
+      <section className="max-w-5xl mx-auto px-3 md:px-5 lg:px-12  mt-20">
         {/* PAGE TITLE */}
         <h2 className="text-3xl md:text-4xl font-extrabold text-black text-center">
-          Dubai Services
+          Dubai Visa Services
         </h2>
 
         {/* IMAGE BETWEEN HEADING & PARAGRAPH */}
@@ -66,8 +72,17 @@ export default function DubaiServices() {
           {services.map((item, index) => (
             <div
               key={index}
-              className="p-6 border rounded-xl shadow-sm hover:shadow-md transition bg-white"
+              className="p-6 border-2  border-black rounded-xl shadow-sm hover:shadow-xl transition duration-300 bg-white"
             >
+              {/* Image Container */}
+              <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden bg-gray-100">
+                <Image
+                  src={item.img}
+                  alt={item.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <h3 className="text-xl md:text-2xl font-semibold text-blue-600">
                 {item.title}
               </h3>
@@ -76,9 +91,12 @@ export default function DubaiServices() {
                 {item.description}
               </p>
 
-              <p className="mt-4 font-medium text-black">Price: {item.price}</p>
+              {/* <p className="mt-4 font-medium text-black">Price: {item.price}</p> */}
             </div>
           ))}
+          <div>
+            <a href="http://www.freepik.com" className="text-sm font-light italic hover:text-blue-600">Images Designed by Freepik</a>
+          </div>
         </div>
       </section>
       <section className="max-w-5xl mx-auto px-4 mt-20">
@@ -105,7 +123,7 @@ export default function DubaiServices() {
               desc: "We manage submissions, government approvals, and notify you when everything is done.",
             },
           ].map((item, index) => (
-            <div key={index} className="p-6 border rounded-lg shadow-sm bg-white">
+            <div key={index} className="p-6 hover:shadow-xl transition duration-300 border rounded-lg shadow-sm bg-white">
               <div className="text-blue-600 text-4xl font-extrabold">{item.step}</div>
               <h3 className="mt-3 text-xl font-semibold text-black">{item.title}</h3>
               <p className="text-gray-700 mt-2 text-sm leading-relaxed">{item.desc}</p>

@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 
 const UsVisaRenewal = () => {
   const phone = "+971502315207";
@@ -45,7 +44,7 @@ const UsVisaRenewal = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 2xl:px-32 space-y-10 py-10">
+    <div className="max-w-5xl mx-auto px-3 md:px-5 lg:px-12 space-y-10 py-10">
       <div className="w-full text-gray-900 space-y-10">
         {/* Title */}
         <h1 className="pt-2 sm:pt-5 text-3xl md:text-4xl font-bold text-black">

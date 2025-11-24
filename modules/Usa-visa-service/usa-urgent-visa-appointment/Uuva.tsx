@@ -2,7 +2,7 @@ export default function USAUrgentVisa() {
   const phone = "+971502315207";
   const email = "info@dreamwiseconnect.com";
   return (
-    <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 2xl:px-32 space-y-10 text-black py-10">
+    <section className="w-full max-w-5xl mx-auto px-3 md:px-5 lg:px-12 space-y-10 text-black py-10">
       {/* Title */}
       <h1 className="pt-2 sm:pt-5 text-2xl md:text-4xl font-bold mb-6 text-center">
         U.S. Visa Urgent Appointment

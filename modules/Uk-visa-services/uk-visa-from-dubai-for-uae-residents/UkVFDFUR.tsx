@@ -57,7 +57,7 @@ const email = "info@dreamwiseconnect.com";
 export default function ApplyUkVisaFromDubai(): JSX.Element {
   return (
     <div className="w-full bg-white text-black">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-12 py-12">
+      <div className="max-w-5xl mx-auto px-3 md:px-5 lg:px-12  py-12">
         {/* HERO */}
         <header className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
           {/* TEXT SECTION */}

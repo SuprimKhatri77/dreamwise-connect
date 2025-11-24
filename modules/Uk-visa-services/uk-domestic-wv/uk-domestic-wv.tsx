@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function UkDomesticWorkerVisa() {
   return (
-    <section className="max-w-5xl mx-auto px-4 py-10">
+    <section className="max-w-5xl mx-auto px-3 md:px-5 lg:px-12 py-10">
       {/* HERO SECTION */}
       <header className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
 

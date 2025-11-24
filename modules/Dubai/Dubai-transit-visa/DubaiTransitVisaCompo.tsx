@@ -9,21 +9,27 @@ export default function DubaiTransitVisaCompo() {
 
   return (
     <div className="w-full flex flex-col gap-10 px-3 md:px-5 lg:px-12 ">
-      <div className="relative w-full pt-5">
-        <h1
-          className="absolute top-15 md:top-20 lg:top-40 left-1/2 -translate-x-1/2 
-              text-gray-100/80 font-bold text-2xl md:text-4xl lg:text-5xl text-center"
-        >
-          Dubai Transit Visa - &quot;48 & 96 Hours&quot;
-        </h1>
+      <div className="relative w-full">
+        {/* Background Image */}
+        <div className="relative w-full h-[260px] md:h-[380px] lg:h-[480px] overflow-hidden">
+          <Image
+            src="/img/Dubai.jpg"
+            alt="Dubai Transit Visa"
+            fill
+            className="object-cover"
+          />
 
-        <Image
-          className="w-full h-auto object-cover max-h-[400px]"
-          src="/img/Dubai.jpg"
-          alt="Dubai image"
-          width={1280}
-          height={720}
-        />
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-black/50"></div>
+
+          {/* Centered Text */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+            <h1 className="text-white font-bold text-3xl md:text-5xl lg:text-6xl leading-tight drop-shadow-md">
+              Dubai Transit Visa <br className="hidden md:block" />
+              <span className="text-blue-400">48 & 96 Hours</span>
+            </h1>
+          </div>
+        </div>
       </div>
 
       {/* Content Section1 */}

@@ -17,22 +17,28 @@ export default function DubaiTourPackageCompo() {
   return (
     <div className="w-full flex flex-col gap-10 px-3 md:px-5 lg:px-12 bg-gray-50 py-10">
       {/* Hero Section with Title Overlay */}
-      <div className="relative w-full pt-5">
-        <h1
-          className="absolute top-15 md:top-20 lg:top-40 left-1/2 -translate-x-1/2 
-          text-gray-100/80 font-bold text-2xl md:text-4xl lg:text-5xl text-center"
-        >
-          Dubai Tour Packages
-        </h1>
+      <div className="relative w-full">
+        {/* Background Image */}
+        <div className="relative w-full h-[260px] md:h-[380px] lg:h-[480px] overflow-hidden">
+          <Image
+            src="/img/Dubai.jpg"
+            alt="Dubai Tour Packages"
+            fill
+            className="object-cover"
+          />
 
-        <Image
-          className="w-full h-auto object-cover max-h-[400px]"
-          src="/img/Dubai.jpg"
-          alt="Dubai image"
-          width={1280}
-          height={720}
-        />
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-black/50"></div>
+
+          {/* Centered Title */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+            <h1 className="text-white font-bold text-3xl md:text-5xl lg:text-6xl leading-tight drop-shadow-md">
+              Dubai Tour Packages
+            </h1>
+          </div>
+        </div>
       </div>
+
 
       {/* Content Section1 */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 2xl:px-32 space-y-10">
