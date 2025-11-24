@@ -2,12 +2,17 @@
 
 import Image from "next/image";
 
-export default function ApplyAustraliaVisaFromDubai() {
-  const phone = "+971502315207";
+export default function ApplyAustraliaVisaFromDubai({
+  whatsappNumber,
+}: {
+  whatsappNumber: string;
+}) {
   const email = "info@dreamwiseconnect.com";
+  const whatsappMessage = encodeURIComponent(
+    "Hi, I would like to know more about Australia visa and services programs. Please assist me."
+  );
   return (
     <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-12 py-12">
-      {/* Hero / Intro */}
       <header className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
         <div className="lg:col-span-2">
           <h1 className="text-3xl md:text-4xl font-extrabold text-black leading-tight">
@@ -51,13 +56,23 @@ export default function ApplyAustraliaVisaFromDubai() {
 
           <div className="mt-6 flex flex-wrap gap-3">
             <a
-              href="#apply"
+              href={`https://wa.me/${whatsappNumber.replace(
+                /\D/g,
+                ""
+              )}?text=${whatsappMessage}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-blue-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-blue-700 transition"
             >
               Start Your Application
             </a>
             <a
-              href="#contact"
+              href={`https://wa.me/${whatsappNumber.replace(
+                /\D/g,
+                ""
+              )}?text=${whatsappMessage}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block border border-gray-200 px-5 py-2 rounded-lg text-black hover:bg-gray-50 transition"
             >
               Contact Us
@@ -88,19 +103,6 @@ export default function ApplyAustraliaVisaFromDubai() {
             travel to Australia for tourism, visiting family, or short business
             trips. Depending on your purpose, the visa may be issued for 3, 6,
             or 12 months.
-          </p>
-        </section>
-
-        {/* Cost */}
-        <section>
-          <h2 className="text-2xl font-semibold text-black">
-            How Much Does It Cost?
-          </h2>
-          <p className="mt-2 text-gray-700">
-            For UAE residents, the standard Australia visitor visa service cost
-            is approximately
-            <strong> AED 1,600 </strong>, which includes full documentation
-            support and handling.
           </p>
         </section>
 
@@ -158,7 +160,7 @@ export default function ApplyAustraliaVisaFromDubai() {
           </p>
           <p className="mt-2 text-gray-700">
             Send your documents via WhatsApp:
-            <span className="font-semibold"> {phone}</span>
+            <span className="font-semibold"> {whatsappNumber}</span>
             <br />
             Or email:
             <span className="font-semibold"> {email}</span>
@@ -189,7 +191,12 @@ export default function ApplyAustraliaVisaFromDubai() {
           from documentation to approval.
         </p>
         <a
-          href="tel:+971502315207"
+          href={`https://wa.me/${whatsappNumber.replace(
+            /\D/g,
+            ""
+          )}?text=${whatsappMessage}`}
+          target="_blank"
+          rel="noopener noreferrer"
           className="mt-4 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition"
         >
           Call / WhatsApp Us

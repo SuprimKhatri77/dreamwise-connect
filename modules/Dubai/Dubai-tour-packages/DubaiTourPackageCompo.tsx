@@ -3,8 +3,12 @@
 import Image from "next/image";
 import TourCards from "./TourCardsCompo";
 
-export default function DubaiTourPackageCompo() {
-  const phone = "+971502315207";
+export default function DubaiTourPackageCompo({
+  whatsappNumber,
+}: {
+  whatsappNumber: string;
+}) {
+  const phone = whatsappNumber;
   const email = "info@dreamwiseconnect.com";
   const tips = [
     "Dress comfortably for the desert weather and don’t forget sunscreen and sunglasses.",
@@ -133,11 +137,11 @@ export default function DubaiTourPackageCompo() {
               Price & Booking
             </h1>
             <p className="text-sm md:text-base leading-relaxed">
-              All of this is available for just 150 AED per person, including
-              transportation and all activities. To reserve your spot, you can
-              contact us via phone, email, or WhatsApp with your preferred date
-              and number of guests. Due to high demand, we recommend booking at
-              least one or two days in advance.
+              This is available including transportation and all activities. To
+              reserve your spot, you can contact us via phone, email, or
+              WhatsApp with your preferred date and number of guests. Due to
+              high demand, we recommend booking at least one or two days in
+              advance.
             </p>
           </div>
         </div>

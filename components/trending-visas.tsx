@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Star, Calendar, ArrowRight, TrendingUp, Sparkles } from "lucide-react";
 import Link from "next/link";
 
-export function TrendingVisas() {
+export function TrendingVisas({ whatsappNumber }: { whatsappNumber: string }) {
   const visas = [
     {
       country: "Dubai UAE Visa",
@@ -55,6 +55,10 @@ export function TrendingVisas() {
       applications: "2.9k+",
     },
   ];
+
+  const whatsappMessage = encodeURIComponent(
+    "Hi, I would like to know more about Visa and Services programs. Please assist me."
+  );
 
   return (
     <section className="py-16 md:py-24 bg-linear-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
@@ -154,8 +158,13 @@ export function TrendingVisas() {
                   Fast-track processing with expert documentation support
                 </p>
 
-                <Link
-                  href={`/${visa.country.toLowerCase().replace(/\s+/g, "-")}`}
+                <a
+                  href={`https://wa.me/${whatsappNumber.replace(
+                    /\D/g,
+                    ""
+                  )}?text=${whatsappMessage}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold group/btn rounded-xl transition-all duration-300 shadow-md hover:shadow-lg">
                     <span>Apply Now</span>
@@ -164,7 +173,7 @@ export function TrendingVisas() {
                       className="ml-2 group-hover/btn:translate-x-1 transition-transform"
                     />
                   </Button>
-                </Link>
+                </a>
               </div>
             </div>
           ))}

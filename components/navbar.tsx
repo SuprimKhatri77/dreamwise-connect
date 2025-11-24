@@ -153,6 +153,12 @@ export function Navbar() {
                     </Link>
                   </div>
                 </div>
+                <Link
+                  href="/citizenship-by-investment"
+                  className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 font-medium border-b border-gray-100"
+                >
+                  Citizenship
+                </Link>
               </div>
             </div>
 
