@@ -3,13 +3,16 @@
 import Image from "next/image";
 import React from "react";
 
-export default function ESTAServicePage() {
+export default function ESTAServicePage({
+  whatsappNumber,
+}: {
+  whatsappNumber: string;
+}) {
   const data = {
     title: "Electronic System For Travel Authorization",
-    price: "AED 650",
   };
 
-  const phone = "+971502315207";
+  const phone = whatsappNumber;
   const email = "info@dreamwiseconnect.com";
 
   return (
@@ -19,10 +22,6 @@ export default function ESTAServicePage() {
         <h1 className="text-2xl md:text-4xl font-bold p-2 sm:p-5">
           {data.title}
         </h1>
-        <p className="text-lg font-medium text-gray-800">
-          Service Price:{" "}
-          <span className="text-blue-600 font-semibold">{data.price}</span>
-        </p>
       </div>
 
       {/* Section Wrapper */}
@@ -115,20 +114,6 @@ export default function ESTAServicePage() {
           </ul>
         </section>
 
-        {/* Cost */}
-        <section>
-          <h2 className="text-xl font-semibold text-blue-600">ESTA Cost</h2>
-          <p className="text-gray-700 mt-2">
-            The cost for a new ESTA is{" "}
-            <span className="font-semibold">{data.price}</span>.
-            <br />
-            <span className="text-sm text-gray-600">
-              *The official U.S. fee is $40. Please verify details before
-              applying.
-            </span>
-          </p>
-        </section>
-
         {/* Travel Insurance */}
         <section>
           <h2 className="text-xl font-semibold text-blue-600">
@@ -137,7 +122,6 @@ export default function ESTAServicePage() {
           <ul className="list-disc pl-6 text-gray-700 space-y-2 mt-2">
             <li>24/7 worldwide assistance.</li>
             <li>Valid for the USA and all future trips.</li>
-            <li>Covers medical emergencies up to USD 50,000.</li>
           </ul>
         </section>
 
@@ -179,7 +163,7 @@ export default function ESTAServicePage() {
           <ul className="list-disc pl-6 text-gray-700 space-y-2 mt-2">
             <li>Online & offline payment options.</li>
             <li>All major credit & debit cards accepted.</li>
-            <li>Bank transfer or cash/card at Regal Tours office.</li>
+            <li>Bank transfer or cash/card at Dreamwise Connect office.</li>
             <li>Payments through any money exchange center.</li>
           </ul>
         </section>

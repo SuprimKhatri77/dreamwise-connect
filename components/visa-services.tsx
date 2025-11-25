@@ -12,14 +12,18 @@ import {
   Zap,
 } from "lucide-react";
 
-export default function VisaServicesPage() {
+export default function VisaServicesPage({
+  whatsappNumber,
+}: {
+  whatsappNumber: string;
+}) {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   const visas = [
     {
       country: "Dubai UAE Visa",
       days: "5",
-      price: "Starting from $299",
+      // price: "Starting from $299",
       image: "/dubai-uae.jpg",
       position: "top",
       category: "asia",
@@ -37,7 +41,7 @@ export default function VisaServicesPage() {
     {
       country: "Europe Visa",
       days: "7",
-      price: "Starting from $499",
+      // price: "Starting from $499",
       image: "/turkey.jpg",
       position: "center",
       category: "europe",
@@ -55,7 +59,7 @@ export default function VisaServicesPage() {
     {
       country: "UK Visa",
       days: "8",
-      price: "Starting from $599",
+      // price: "Starting from $599",
       image: "/uk.jpg",
       position: "bottom",
       category: "europe",
@@ -73,7 +77,7 @@ export default function VisaServicesPage() {
     {
       country: "Australia Visa",
       days: "14",
-      price: "Starting from $699",
+      // price: "Starting from $699",
       image: "/australia.jpg",
       position: "center",
       category: "oceania",
@@ -91,7 +95,7 @@ export default function VisaServicesPage() {
     {
       country: "USA Visa",
       days: "15",
-      price: "Starting from $799",
+      // price: "Starting from $799",
       image: "/usa.jpg",
       position: "center",
       category: "americas",
@@ -106,60 +110,6 @@ export default function VisaServicesPage() {
       processingTime: "12-15 working days",
       validity: "Up to 10 years",
     },
-    // {
-    //   country: "Canada Visa",
-    //   days: "10",
-    //   price: "Starting from $649",
-    //   image: "/dubai-uae.jpg",
-    //   position: "center",
-    //   category: "americas",
-    //   description:
-    //     "Experience Canada's natural beauty and vibrant cities with our visa assistance.",
-    //   features: [
-    //     "eTA & visitor visas",
-    //     "Biometric services",
-    //     "Multiple entry options",
-    //     "Family applications",
-    //   ],
-    //   processingTime: "8-10 working days",
-    //   validity: "Up to 10 years",
-    // },
-    // {
-    //   country: "Singapore Visa",
-    //   days: "4",
-    //   price: "Starting from $249",
-    //   image: "/turkey.jpg",
-    //   position: "center",
-    //   category: "asia",
-    //   description:
-    //     "Visit the Lion City with our quick and efficient Singapore visa processing.",
-    //   features: [
-    //     "Electronic visa",
-    //     "Fast processing",
-    //     "Multiple entry",
-    //     "Business support",
-    //   ],
-    //   processingTime: "3-4 working days",
-    //   validity: "30-90 days",
-    // },
-    // {
-    //   country: "Japan Visa",
-    //   days: "9",
-    //   price: "Starting from $549",
-    //   image: "/uk.jpg",
-    //   position: "center",
-    //   category: "asia",
-    //   description:
-    //     "Explore Japan's unique blend of tradition and modernity with our visa services.",
-    //   features: [
-    //     "Tourist & business visas",
-    //     "Cultural exchange support",
-    //     "Document translation",
-    //     "Itinerary assistance",
-    //   ],
-    //   processingTime: "7-9 working days",
-    //   validity: "15-90 days",
-    // },
   ];
 
   const categories = [
@@ -200,6 +150,10 @@ export default function VisaServicesPage() {
         "Round-the-clock assistance for all your visa-related queries",
     },
   ];
+
+  const whatsappMessage = encodeURIComponent(
+    "Hi, I would like to know more about Visa and Services programs. Please assist me."
+  );
 
   return (
     <div className="min-h-screen bg-white">
@@ -322,16 +276,16 @@ export default function VisaServicesPage() {
                     {visa.description}
                   </p>
 
-                  <div className="flex items-center justify-between mb-4 pb-4 border-b">
-                    <div>
+                  <div className="flex items-center  mb-4 pb-4 border-b">
+                    {/* <div>
                       <div className="text-xs text-gray-500 uppercase">
                         Starting From
                       </div>
                       <div className="text-xl font-bold text-gray-900">
                         {visa.price}
                       </div>
-                    </div>
-                    <div className="text-right">
+                    </div> */}
+                    <div className="">
                       <div className="text-xs text-gray-500 uppercase">
                         Validity
                       </div>
@@ -356,13 +310,21 @@ export default function VisaServicesPage() {
                     ))}
                   </div>
 
-                  <button className="w-full bg-black text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors flex items-center justify-center gap-2 group">
+                  <a
+                    href={`https://wa.me/${whatsappNumber.replace(
+                      /\D/g,
+                      ""
+                    )}?text=${whatsappMessage}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-black text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors flex items-center justify-center gap-2 group"
+                  >
                     Apply Now
                     <ArrowRight
                       size={18}
                       className="group-hover:translate-x-1 transition-transform"
                     />
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}

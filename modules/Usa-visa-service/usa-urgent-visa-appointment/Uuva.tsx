@@ -1,5 +1,9 @@
-export default function USAUrgentVisa() {
-  const phone = "+971502315207";
+export default function USAUrgentVisa({
+  whatsappNumber,
+}: {
+  whatsappNumber: string;
+}) {
+  const phone = whatsappNumber;
   const email = "info@dreamwiseconnect.com";
   return (
     <section className="w-full max-w-5xl mx-auto px-3 md:px-5 lg:px-12 space-y-10 text-black py-10">
@@ -13,9 +17,7 @@ export default function USAUrgentVisa() {
         <p className="text-lg font-semibold text-black">
           USA Urgent Visa Appointments from Dubai
         </p>
-        <p className="text-blue-600 font-semibold text-xl">
-          Just From AED 2500
-        </p>
+
         <p>
           Getting a USA visa appointment has become increasingly difficult, with
           many travelers facing long waiting times. At{" "}
@@ -48,17 +50,10 @@ export default function USAUrgentVisa() {
 
       {/* Duration */}
       <h2 className="text-xl md:text-2xl font-bold mt-10 mb-4">
-        How Long Does It Take?
+        Refund Policy
       </h2>
 
       <div className="space-y-3 text-gray-800">
-        <p>
-          Normal Appointment (AED 1,650): Appointment expected within 1 year.
-        </p>
-        <p>
-          Urgent Appointment (AED 1,650 + Starts From AED 2,500): Appointment
-          confirmed within <span className="font-semibold">10–30 days</span>.
-        </p>
         <p className="text-sm text-gray-700">
           * Urgent fee is refunded if the appointment cannot be secured.
           <br />* Regular visa application fee is non-refundable.
@@ -115,7 +110,7 @@ export default function USAUrgentVisa() {
           <span className="font-semibold">Call / WhatsApp:</span> {phone}
         </p>
         <p>
-          <span className="font-semibold">Office:</span> +97142635 888
+          <span className="font-semibold">Office:</span> {phone}
         </p>
         <p>
           <span className="font-semibold">Email:</span> {email}

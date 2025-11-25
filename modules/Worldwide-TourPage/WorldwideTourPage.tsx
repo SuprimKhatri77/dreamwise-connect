@@ -6,12 +6,15 @@ import Image from "next/image";
 type TourCardProps = {
   name: string;
   img: string;
-  price: string;
+  number: string;
 };
-const phone = "+971502315207";
 const email = "info@dreamwiseconnect.com";
 
-function TourCard({ name, img, price }: TourCardProps) {
+function TourCard({ name, img, number }: TourCardProps) {
+  const whatsappNumber = number;
+  const whatsappMessage = encodeURIComponent(
+    "Hi, I would like to know more about citizenship by investment programs. Please assist me."
+  );
   return (
     <article className="bg-white border rounded-2xl p-4 shadow-sm hover:shadow-md hover:scale-105 transition-transform">
       <div className="w-full h-36 relative rounded-lg overflow-hidden">
@@ -26,13 +29,17 @@ function TourCard({ name, img, price }: TourCardProps) {
 
         <div className="text-right">
           <div className="text-sm text-gray-500">From</div>
-          <div className="text-blue-600 font-semibold">{price}</div>
         </div>
       </div>
 
       <div className="mt-4 flex gap-2">
         <a
-          href="#apply"
+          href={`https://wa.me/${whatsappNumber.replace(
+            /\D/g,
+            ""
+          )}?text=${whatsappMessage}`}
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block flex-1 text-center bg-blue-600 text-white px-3 py-2 rounded-md text-sm hover:bg-blue-700 transition"
         >
           Book Now
@@ -42,18 +49,24 @@ function TourCard({ name, img, price }: TourCardProps) {
   );
 }
 
-export default function WorldwideTourPage(): JSX.Element {
+export default function WorldwideTourPage({
+  whatsappNumber,
+}: {
+  whatsappNumber: string;
+}): JSX.Element {
+  const whatsappMessage = encodeURIComponent(
+    "Hi, I would like to know more about World Wide Tour programs. Please assist me."
+  );
   const tours = [
-    { name: "Europe & Schengen Tour", img: "/img/eu.jpg", price: "AED 5,500" },
-    { name: "North America Tour", img: "/img/na.jpg", price: "AED 7,000" },
-    { name: "Asia Adventure Tour", img: "/img/asia.jpg", price: "AED 4,500" },
+    { name: "Europe & Schengen Tour", img: "/img/eu.jpg" },
+    { name: "North America Tour", img: "/img/na.jpg" },
+    { name: "Asia Adventure Tour", img: "/img/asia.jpg" },
     {
       name: "Australia & Oceania",
       img: "/img/australia.jpg",
-      price: "AED 6,800",
     },
-    { name: "South America Tour", img: "/img/sa.jpg", price: "AED 6,200" },
-    { name: "Africa Safari Tour", img: "/img/africa.jpg", price: "AED 5,900" },
+    { name: "South America Tour", img: "/img/sa.jpg" },
+    { name: "Africa Safari Tour", img: "/img/africa.jpg" },
   ];
 
   return (
@@ -74,7 +87,7 @@ export default function WorldwideTourPage(): JSX.Element {
             </p>
 
             <p className="mt-4 text-gray-700 text-sm md:text-base max-w-2xl">
-              Regal Tours has partnered with over 8,400 travel and tourism
+              Dreamwise Connect has partnered with over 8,400 travel and tourism
               companies across 152 countries to create memorable experiences for
               travelers worldwide.
             </p>
@@ -129,7 +142,7 @@ export default function WorldwideTourPage(): JSX.Element {
                 key={t.name}
                 name={t.name}
                 img={t.img}
-                price={t.price}
+                number={whatsappNumber}
               />
             ))}
           </div>
@@ -158,7 +171,7 @@ export default function WorldwideTourPage(): JSX.Element {
 
           <div className="mt-4 text-gray-700">
             <p>
-              WhatsApp: <strong>{phone}</strong>
+              WhatsApp: <strong>{whatsappNumber}</strong>
               <br />
               Email: <strong>{email}</strong>
             </p>
@@ -179,13 +192,23 @@ export default function WorldwideTourPage(): JSX.Element {
           </p>
           <div className="mt-4 flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="tel:+971502315207"
+              href={`https://wa.me/${whatsappNumber.replace(
+                /\D/g,
+                ""
+              )}?text=${whatsappMessage}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition"
             >
               Call / WhatsApp
             </a>
             <a
-              href="#apply"
+              href={`https://wa.me/${whatsappNumber.replace(
+                /\D/g,
+                ""
+              )}?text=${whatsappMessage}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block border border-gray-200 px-6 py-3 rounded-lg"
             >
               Start Booking

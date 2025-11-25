@@ -7,23 +7,19 @@ import Image from "next/image";
 const visaTypes = [
   {
     title: "6-Month Standard Visitor",
-    price: "AED 1,700",
     subtitle:
       "Tourism, family visits, short business or study (up to 6 months)",
   },
   {
     title: "2-Year Multiple Entry",
-    price: "AED 5,200",
     subtitle: "Frequent travellers who visit the UK often",
   },
   {
     title: "5-Year Multiple Entry",
-    price: "AED 7,200",
     subtitle: "Longer-term frequent travel, multiple 6-month visits",
   },
   {
     title: "10-Year Multiple Entry",
-    price: "AED 8,200",
     subtitle: "Maximum validity for eligible travellers",
   },
 ];
@@ -32,12 +28,10 @@ const urgentOptions = [
   {
     title: "Priority Service",
     price: "Decision in 5–7 working days",
-    extra: "Add AED 2,700 for priority processing",
   },
   {
     title: "Super Priority",
     price: "Decision in 24–48 hours",
-    extra: "Add AED 5,200 for super priority processing",
   },
 ];
 
@@ -51,10 +45,16 @@ const requiredDocs = [
   "Trade license copy (if business owner/partner)",
 ];
 
-const phone = "+971502315207";
 const email = "info@dreamwiseconnect.com";
 
-export default function ApplyUkVisaFromDubai(): JSX.Element {
+export default function ApplyUkVisaFromDubai({
+  whatsappNumber,
+}: {
+  whatsappNumber: string;
+}): JSX.Element {
+  const whatsappMessage = encodeURIComponent(
+    "Hi, I would like to know more about UK Visa from Dubai programs. Please assist me."
+  );
   return (
     <div className="w-full bg-white text-black">
       <div className="max-w-5xl mx-auto px-3 md:px-5 lg:px-12  py-12">
@@ -104,14 +104,24 @@ export default function ApplyUkVisaFromDubai(): JSX.Element {
 
             <div className="mt-6 flex flex-wrap gap-3">
               <a
-                href="#apply"
+                href={`https://wa.me/${whatsappNumber.replace(
+                  /\D/g,
+                  ""
+                )}?text=${whatsappMessage}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-blue-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-blue-700 transition"
               >
                 Start Your Application
               </a>
 
               <a
-                href="#contact"
+                href={`https://wa.me/${whatsappNumber.replace(
+                  /\D/g,
+                  ""
+                )}?text=${whatsappMessage}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block border border-gray-200 px-5 py-2 rounded-lg text-black hover:bg-gray-50 transition"
               >
                 Contact Us
@@ -148,17 +158,19 @@ export default function ApplyUkVisaFromDubai(): JSX.Element {
                 key={i}
                 className="bg-white flex flex-col justify-between border rounded-2xl p-5 shadow-sm hover:shadow-md transition"
               >
-                <div className="flex items-center gap-2 justify-between">
+                <div className="flex items-center gap-2">
                   <h3 className="text-lg font-semibold">{v.title}</h3>
-                  <span className="text-sm text-blue-600 font-semibold">
-                    {v.price}
-                  </span>
                 </div>
                 <p className="mt-3 text-gray-700 text-sm">{v.subtitle}</p>
 
                 <div className="mt-4 flex items-center justify-between">
                   <a
-                    href="#apply"
+                    href={`https://wa.me/${whatsappNumber.replace(
+                      /\D/g,
+                      ""
+                    )}?text=${whatsappMessage}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-sm bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
                   >
                     Apply Now
@@ -184,14 +196,12 @@ export default function ApplyUkVisaFromDubai(): JSX.Element {
             <div className="flex gap-3">
               <div className="text-right">
                 <div className="text-sm text-gray-600">Priority</div>
-                <div className="text-lg font-semibold">+ AED 2,700</div>
                 <div className="text-xs text-gray-500">
                   Decision in 5–7 working days
                 </div>
               </div>
               <div className="text-right border-l pl-4">
                 <div className="text-sm text-gray-600">Super Priority</div>
-                <div className="text-lg font-semibold">+ AED 5,200</div>
                 <div className="text-xs text-gray-500">
                   Decision in 24–48 hours
                 </div>
@@ -204,10 +214,14 @@ export default function ApplyUkVisaFromDubai(): JSX.Element {
               <div key={i} className="rounded-lg bg-white p-4 border shadow-sm">
                 <h4 className="font-semibold text-black">{opt.title}</h4>
                 <p className="text-gray-700 mt-2 text-sm">{opt.price}</p>
-                <p className="text-gray-500 text-xs mt-2">{opt.extra}</p>
                 <div className="mt-4">
                   <a
-                    href="#apply"
+                    href={`https://wa.me/${whatsappNumber.replace(
+                      /\D/g,
+                      ""
+                    )}?text=${whatsappMessage}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md text-sm"
                   >
                     Request Priority
@@ -282,7 +296,6 @@ export default function ApplyUkVisaFromDubai(): JSX.Element {
                 <tr className="text-sm text-gray-600">
                   <th className="py-3 pr-6">Type</th>
                   <th className="py-3 pr-6">Details</th>
-                  <th className="py-3">Price</th>
                 </tr>
               </thead>
               <tbody>
@@ -291,28 +304,24 @@ export default function ApplyUkVisaFromDubai(): JSX.Element {
                   <td className="py-4 text-gray-700">
                     Single or multiple entry for up to 6 months
                   </td>
-                  <td className="py-4 font-semibold">AED 1,700</td>
                 </tr>
                 <tr className="border-t bg-gray-50">
                   <td className="py-4">2 Years Multiple</td>
                   <td className="py-4 text-gray-700">
                     Frequent travel, 6-month stay per visit
                   </td>
-                  <td className="py-4 font-semibold">AED 5,200</td>
                 </tr>
                 <tr className="border-t">
                   <td className="py-4">5 Years Multiple</td>
                   <td className="py-4 text-gray-700">
                     Ideal for regular travellers
                   </td>
-                  <td className="py-4 font-semibold">AED 7,200</td>
                 </tr>
                 <tr className="border-t bg-gray-50">
                   <td className="py-4">10 Years Multiple</td>
                   <td className="py-4 text-gray-700">
                     Maximum validity for eligible applicants
                   </td>
-                  <td className="py-4 font-semibold">AED 8,200</td>
                 </tr>
               </tbody>
             </table>
@@ -348,10 +357,10 @@ export default function ApplyUkVisaFromDubai(): JSX.Element {
 
               <ul className="mt-3 text-gray-700">
                 <li>
-                  <strong>WhatsApp:</strong> {phone}
+                  <strong>WhatsApp:</strong> {whatsappNumber}
                 </li>
                 <li>
-                  <strong>Office:</strong> +971 4 2635 888
+                  <strong>Office:</strong> {whatsappNumber}
                 </li>
                 <li>
                   <strong>Email:</strong> {email}
@@ -361,13 +370,23 @@ export default function ApplyUkVisaFromDubai(): JSX.Element {
 
             <div className="flex flex-col gap-3">
               <a
-                href="tel:+971502315207"
+                href={`https://wa.me/${whatsappNumber.replace(
+                  /\D/g,
+                  ""
+                )}?text=${whatsappMessage}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block text-center bg-blue-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
               >
                 Call / WhatsApp
               </a>
               <a
-                href="#contact"
+                href={`https://wa.me/${whatsappNumber.replace(
+                  /\D/g,
+                  ""
+                )}?text=${whatsappMessage}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block text-center border border-gray-200 px-4 py-3 rounded-lg"
               >
                 Book Consultation

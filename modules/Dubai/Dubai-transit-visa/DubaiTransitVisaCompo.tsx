@@ -3,9 +3,17 @@
 import { CheckCircle } from "lucide-react";
 import Image from "next/image";
 
-export default function DubaiTransitVisaCompo() {
-  const phone = "+971502315207";
+export default function DubaiTransitVisaCompo({
+  whatsappNumber,
+}: {
+  whatsappNumber: string;
+}) {
+  const phone = whatsappNumber;
   const email = "info@dreamwiseconnect.com";
+
+  const whatsappMessage = encodeURIComponent(
+    "Hi, I would like to know more about Dubai Transit Visa program. Please assist me."
+  );
 
   return (
     <div className="w-full flex flex-col gap-10 px-3 md:px-5 lg:px-12 ">
@@ -103,9 +111,17 @@ export default function DubaiTransitVisaCompo() {
 
                 {/* Contact */}
                 <div className="mt-4">
-                  <button className="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all text-sm md:text-base">
+                  <a
+                    href={`https://wa.me/${whatsappNumber.replace(
+                      /\D/g,
+                      ""
+                    )}?text=${whatsappMessage}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all text-sm md:text-base"
+                  >
                     Contact Dream Wise Connect
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -205,9 +221,6 @@ export default function DubaiTransitVisaCompo() {
                   Ideal for short layovers under two days. Perfect if
                   you&apos;re stopping in Dubai before your final destination.
                 </p>
-                <p className="font-medium text-blue-600 text-sm">
-                  Price: AED 350 (includes mandatory travel insurance)
-                </p>
               </div>
 
               {/* 96-hour visa */}
@@ -218,9 +231,6 @@ export default function DubaiTransitVisaCompo() {
                 <p className="text-gray-700 text-sm leading-relaxed">
                   Suitable for travelers wishing to explore Dubai more
                   comfortably during a 4-day stopover.
-                </p>
-                <p className="font-medium text-blue-600 text-sm">
-                  Price: AED 450 (includes mandatory travel insurance)
                 </p>
               </div>
             </div>
@@ -261,9 +271,6 @@ export default function DubaiTransitVisaCompo() {
             </h2>
             <p className="text-gray-800 text-sm md:text-base">
               <span className="font-medium">Standard:</span> 2 working days
-              <br />
-              <span className="font-medium">Urgent:</span> Within 24 hours
-              (extra AED 500)
             </p>
           </div>
 

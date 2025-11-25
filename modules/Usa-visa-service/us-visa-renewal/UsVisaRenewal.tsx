@@ -1,13 +1,9 @@
 "use client";
 
-const UsVisaRenewal = () => {
-  const phone = "+971502315207";
-  const email = "info@regaluae.com";
+const UsVisaRenewal = ({ whatsappNumber }: { whatsappNumber: string }) => {
+  const phone = whatsappNumber;
+  const email = "info@dreamwiseconnect.com";
   const faqs = [
-    {
-      q: "What is the cost of renewing a US visa in Dubai?",
-      a: "The total fee is AED 1650. It includes the visa fee, DS-160 form preparation, documentation support, appointment handling, and processing.",
-    },
     {
       q: "How long does the renewal process take?",
       a: "Once your documents are submitted, the renewal typically takes 15–25 days.",
@@ -50,11 +46,6 @@ const UsVisaRenewal = () => {
         <h1 className="pt-2 sm:pt-5 text-3xl md:text-4xl font-bold text-black">
           US Visa Renewal for UAE Residents
         </h1>
-
-        {/* Price */}
-        <p className="text-blue-600 font-semibold text-xl">
-          Service Fee: AED 1650
-        </p>
 
         {/* Intro Section */}
         <section className="space-y-4">
