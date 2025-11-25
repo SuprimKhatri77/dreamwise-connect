@@ -3,9 +3,9 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 import Link from "next/link";
 
-export function Footer() {
+export function Footer({ whatsappNumber }: { whatsappNumber: string }) {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/1234567890", "_blank");
+    window.open(`https://wa.me/${whatsappNumber}`, "_blank");
   };
 
   return (
@@ -26,7 +26,10 @@ export function Footer() {
                 className="flex items-center gap-2 hover:text-primary-foreground transition-colors"
               >
                 <Phone size={16} />
-                +1 (234) 567-8900
+                <div>
+                  <p>+971 54 512 9737</p>
+                  <p>+971 50 537 2081</p>
+                </div>
               </button>
               <a
                 href="mailto:info@dreamwiseconnect.com"

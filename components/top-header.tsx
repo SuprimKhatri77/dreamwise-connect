@@ -2,9 +2,9 @@
 
 import { Phone } from "lucide-react";
 
-export function TopHeader() {
+export function TopHeader({ whatsappNumber }: { whatsappNumber: string }) {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/1234567890", "_blank");
+    window.open(`https://wa.me/${whatsappNumber}`, "_blank");
   };
 
   return (
@@ -15,7 +15,8 @@ export function TopHeader() {
           className="flex items-center gap-2 hover:opacity-80 transition-opacity"
         >
           <Phone size={16} />
-          <span className="text-xs sm:text-sm">+1 (234) 567-8900</span>
+          <span className="text-xs sm:text-sm">+971 54 512 9737</span>
+          <span className="text-xs sm:text-sm">+971 50 537 2081</span>
         </button>
 
         <div className="flex items-center gap-4">

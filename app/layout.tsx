@@ -36,14 +36,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const whatsappNumber = process.env.WHATSAPP_NUMBER!;
   return (
     <html lang="en">
       <body className={`${_inter.className} antialiased bg-white `}>
-        <TopHeader />
+        <TopHeader whatsappNumber={whatsappNumber} />
         <Navbar />
         <main className="py-20">{children}</main>
-        <Footer />
-        <StickyContactWidget />
+        <Footer whatsappNumber={whatsappNumber} />
+        <StickyContactWidget whatsappNumber={whatsappNumber} />
       </body>
     </html>
   );

@@ -3,13 +3,13 @@ import { MessageCircle, ChevronDown, X } from "lucide-react";
 import { useState } from "react";
 
 interface StickyContactWidgetProps {
-  phoneNumber?: string;
+  whatsappNumber: string;
   heading?: string;
   description?: string;
 }
 
 export function StickyContactWidget({
-  phoneNumber = "+1 (234) 567-8900",
+  whatsappNumber,
   heading = "Need Help?",
   description = "Get in touch with our visa consultants via WhatsApp",
 }: StickyContactWidgetProps) {
@@ -17,7 +17,7 @@ export function StickyContactWidget({
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   const handleWhatsAppClick = () => {
-    const number = phoneNumber.replace(/\D/g, "");
+    const number = whatsappNumber.replace(/\D/g, "");
     window.open(`https://wa.me/${number}`, "_blank");
   };
 
@@ -74,7 +74,7 @@ export function StickyContactWidget({
               </button>
 
               <p className="text-xs text-gray-500 dark:text-gray-500 text-center mt-3 pt-3 border-t border-gray-200 dark:border-gray-700">
-                {phoneNumber}
+                {whatsappNumber}
               </p>
             </div>
           </div>
@@ -145,7 +145,7 @@ export function StickyContactWidget({
                   </button>
 
                   <p className="text-xs text-gray-500 text-center mt-3 pt-3 border-t border-gray-200 dark:border-gray-700">
-                    {phoneNumber}
+                    {whatsappNumber}
                   </p>
                 </div>
               </div>

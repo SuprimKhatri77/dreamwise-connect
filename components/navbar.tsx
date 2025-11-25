@@ -84,21 +84,53 @@ export function Navbar() {
                     >
                       Dubai Tour Packages
                     </Link>
+                    <Link
+                      href="/dubai-visa-services"
+                      className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 text-sm border-b border-gray-100"
+                    >
+                      Dubai Visa Services
+                    </Link>
                   </div>
                 </div>
 
-                <Link
-                  href="/australia-visa"
-                  className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 font-medium border-b border-gray-100"
-                >
-                  Australia Visa
-                </Link>
-                <Link
-                  href="/europe-visa"
-                  className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 font-medium border-b border-gray-100"
-                >
-                  Europe Visa
-                </Link>
+                <div className="relative group/nested">
+                  <Link
+                    href="/australia-visa"
+                    className="w-full text-left px-5 py-3 hover:bg-blue-50 transition-colors flex items-center justify-between text-gray-700 font-medium border-b border-gray-100"
+                  >
+                    Australia Visa
+                    <ChevronRight className="w-4 h-4" />
+                  </Link>
+
+                  <div className="absolute right-full top-0 mr-1 w-56 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-200">
+                    <Link
+                      href="/australia-visa-services"
+                      className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 text-sm border-b border-gray-100"
+                    >
+                      Australia Visa Services
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="relative group/nested">
+                  <Link
+                    href="/europe-visa"
+                    className="w-full text-left px-5 py-3 hover:bg-blue-50 transition-colors flex items-center justify-between text-gray-700 font-medium border-b border-gray-100"
+                  >
+                    Europe Visa
+                    <ChevronRight className="w-4 h-4" />
+                  </Link>
+
+                  <div className="absolute right-full top-0 mr-1 w-56 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-200">
+                    <Link
+                      href="/europe-visa-services"
+                      className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 text-sm border-b border-gray-100"
+                    >
+                      Europe Visa Services
+                    </Link>
+                  </div>
+                </div>
+
                 <div className="relative group/nested">
                   <button className="w-full text-left px-5 py-3 hover:bg-blue-50 transition-colors flex items-center justify-between text-gray-700 font-medium border-b border-gray-100">
                     UK Visa
