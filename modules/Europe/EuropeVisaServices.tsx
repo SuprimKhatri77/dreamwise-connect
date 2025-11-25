@@ -130,7 +130,7 @@ export default function EuropeServices() {
           <li>Last 3–6 months bank statements with sufficient balance</li>
           <li>Confirmed hotel booking or sponsorship proof</li>
           <li>Round-trip flight reservation</li>
-          <li>Travel insurance with minimum €30,000 coverage (mandatory)</li>
+          <li>Travel insurance covering essential medical and emergency needs (required)</li>
           <li>NOC from employer / company or proof of self-employment</li>
           <li>Previous Schengen or travel history (if available)</li>
         </ul>
