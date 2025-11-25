@@ -99,8 +99,11 @@ const countries = [
   },
 ];
 
-export default function CIBCountryCards() {
-  const whatsappNumber = "+1234567890";
+export default function CIBCountryCards({
+  whatsappNumber,
+}: {
+  whatsappNumber: string;
+}) {
   const whatsappMessage = encodeURIComponent(
     "Hi, I would like to know more about citizenship by investment programs. Please assist me."
   );

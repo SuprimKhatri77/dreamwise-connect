@@ -42,18 +42,6 @@ export default function DubaiTransitVisaCompo({
 
       {/* Content Section1 */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 2xl:px-32 space-y-10">
-        <div className="w-full overflow-hidden flex justify-start ">
-          <div>
-            <Image
-              src="/img/visa.JPG"
-              alt="Dubai visa"
-              className="w-full rounded-lg object-cover object-bottom-left max-h-[400px]"
-              width={1200}
-              height={500}
-            />
-          </div>
-        </div>
-
         <div className="text-gray-900 space-y-8">
           {/* Section */}
           <div>
@@ -354,7 +342,7 @@ export default function DubaiTransitVisaCompo({
               Need More Help?
             </h2>
             <p className="text-sm md:text-base">
-              WhatsApp: <span className="font-semibold">+971502315207</span>
+              WhatsApp: <span className="font-semibold">{whatsappNumber}</span>
               <br />
               Email:{" "}
               <span className="font-semibold">info@dreamwiseconnect.com</span>

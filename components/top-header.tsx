@@ -4,7 +4,8 @@ import { Phone } from "lucide-react";
 
 export function TopHeader({ whatsappNumber }: { whatsappNumber: string }) {
   const handleWhatsAppClick = () => {
-    window.open(`https://wa.me/${whatsappNumber}`, "_blank");
+    const number = whatsappNumber.replace(/\D/g, "");
+    window.open(`https://wa.me/${number}`, "_blank");
   };
 
   return (

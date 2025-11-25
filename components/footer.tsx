@@ -50,7 +50,7 @@ export function Footer({ whatsappNumber }: { whatsappNumber: string }) {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="#"
+                  href="/"
                   className="hover:text-primary-foreground transition-colors"
                 >
                   Home
@@ -58,7 +58,7 @@ export function Footer({ whatsappNumber }: { whatsappNumber: string }) {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/about"
                   className="hover:text-primary-foreground transition-colors"
                 >
                   About Us
@@ -66,18 +66,26 @@ export function Footer({ whatsappNumber }: { whatsappNumber: string }) {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/contact"
                   className="hover:text-primary-foreground transition-colors"
                 >
-                  Services
+                  Contact
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/visa-and-services"
                   className="hover:text-primary-foreground transition-colors"
                 >
-                  Contact
+                  Visa and Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/world-wide-tour"
+                  className="hover:text-primary-foreground transition-colors"
+                >
+                  World Wide Tour
                 </Link>
               </li>
             </ul>
@@ -88,7 +96,7 @@ export function Footer({ whatsappNumber }: { whatsappNumber: string }) {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="#"
+                  href="/dubai-visa-services"
                   className="hover:text-primary-foreground transition-colors"
                 >
                   Dubai UAE Visa
@@ -96,15 +104,15 @@ export function Footer({ whatsappNumber }: { whatsappNumber: string }) {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/europe-visa"
                   className="hover:text-primary-foreground transition-colors"
                 >
-                  Turkey Visa
+                  Europe Visa
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/uk-visa-from-dubai-for-uae-residents"
                   className="hover:text-primary-foreground transition-colors"
                 >
                   UK Visa
@@ -112,10 +120,26 @@ export function Footer({ whatsappNumber }: { whatsappNumber: string }) {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/usa-visa-from-dubai"
                   className="hover:text-primary-foreground transition-colors"
                 >
                   USA Visa
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/australia-visa"
+                  className="hover:text-primary-foreground transition-colors"
+                >
+                  Australia Visa
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/citizenship-by-investment"
+                  className="hover:text-primary-foreground transition-colors"
+                >
+                  Citizenship by Investment
                 </Link>
               </li>
             </ul>
