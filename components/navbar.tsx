@@ -29,17 +29,18 @@ export function Navbar() {
   return (
     <nav className="bg-white shadow-md fixed top-10  sm:top-10 left-0 right-0 z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-18">
           <div className="shrink-0">
             <Link
               href="/"
               className="text-xl sm:text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors"
             >
               <Image
-                src="/dreamwise-connect.png"
+                src="/dreamwiseglobal-nobg.png"
                 alt="Dreamwise Connect"
-                width={100}
-                height={100}
+                width={160}
+                height={160}
+                className="bg-transparent"
               />
             </Link>
           </div>

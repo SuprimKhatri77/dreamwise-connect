@@ -7,7 +7,7 @@ export function AboutUs() {
             <div
               className="w-full h-96 rounded-lg overflow-hidden shadow-xl border border-border"
               style={{
-                backgroundImage: "url(/dreamwise-connect.png)",
+                backgroundImage: "url(/dreamwiseglobal-nobg.png)",
                 backgroundSize: "contain",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",

@@ -14,7 +14,7 @@ export function Footer({ whatsappNumber }: { whatsappNumber: string }) {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <h3 className="font-serif text-xl font-bold mb-4">
-              Dreamwise Connect
+              Dreamwise Global
             </h3>
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-4">
               Your trusted partner for visa consultancy and travel services
@@ -32,11 +32,11 @@ export function Footer({ whatsappNumber }: { whatsappNumber: string }) {
                 </div>
               </button>
               <a
-                href="mailto:info@dreamwiseconnect.com"
+                href="mailto:info@dreamwisegroup.com"
                 className="flex items-center gap-2 hover:text-primary-foreground transition-colors"
               >
                 <Mail size={16} />
-                info@dreamwise.com
+                info@dreamwisegroup.com
               </a>
               <div className="flex items-center gap-2">
                 <MapPin size={16} />
@@ -227,7 +227,7 @@ export function Footer({ whatsappNumber }: { whatsappNumber: string }) {
 
         <div className="border-t border-primary-foreground/20 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-primary-foreground/70">
-            <p>&copy; 2025 Dreamwise Connect. All rights reserved.</p>
+            <p>&copy; 2025 Dreamwise Global. All rights reserved.</p>
             <div className="flex gap-6">
               <Link
                 href="#"

@@ -11,7 +11,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
-              About Dreamwise Connect
+              About Dreamwise Global
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Your trusted partner in making global mobility dreams a reality
@@ -30,7 +30,7 @@ export default function AboutPage() {
               <div
                 className="w-full h-96 rounded-lg overflow-hidden shadow-lg border border-border"
                 style={{
-                  backgroundImage: "url(/dreamwise-connect.png)",
+                  backgroundImage: "url(/dreamwiseglobal-nobg.png)",
                   backgroundSize: "contain",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
@@ -38,7 +38,7 @@ export default function AboutPage() {
               />
               <div>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                  Dreamwise Connect is a leading visa consultancy firm dedicated
+                  Dreamwise Global is a leading visa consultancy firm dedicated
                   to making international travel accessible and hassle-free.
                   With over a decade of experience, we&apos;ve successfully
                   guided thousands of clients through their visa applications
@@ -61,7 +61,7 @@ export default function AboutPage() {
 
           <div className="mb-20">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-12">
-              Why Choose Dreamwise Connect?
+              Why Choose Dreamwise Global?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
