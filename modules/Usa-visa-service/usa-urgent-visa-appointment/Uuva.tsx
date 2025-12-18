@@ -1,10 +1,11 @@
 export default function USAUrgentVisa({
   whatsappNumber,
+  email,
 }: {
   whatsappNumber: string;
+  email: string;
 }) {
   const phone = whatsappNumber;
-  const email = "info@dreamwiseconnect.com";
   return (
     <section className="w-full max-w-5xl mx-auto px-3 md:px-5 lg:px-12 space-y-10 text-black py-10">
       {/* Title */}
@@ -21,7 +22,7 @@ export default function USAUrgentVisa({
         <p>
           Getting a USA visa appointment has become increasingly difficult, with
           many travelers facing long waiting times. At{" "}
-          <span className="font-semibold">Dream Wise Connect</span>, we
+          <span className="font-semibold">Dream Wise Global</span>, we
           understand the urgency—whether it&apos;s for business, family, medical
           needs, or travel.
         </p>
@@ -35,7 +36,7 @@ export default function USAUrgentVisa({
 
       {/* Why Choose Us */}
       <h2 className="text-xl md:text-2xl font-bold mt-10 mb-4">
-        Why Choose Dream Wise Connect for Urgent USA Visa Appointments?
+        Why Choose Dream Wise Global for Urgent USA Visa Appointments?
       </h2>
 
       <ul className="space-y-2 text-gray-800 list-disc pl-6">
@@ -97,7 +98,7 @@ export default function USAUrgentVisa({
 
       {/* Contact */}
       <h2 className="text-xl md:text-2xl font-bold text-blue-600 mt-10 mb-2">
-        Contact Dream Wise Connect
+        Contact Dream Wise Global
       </h2>
 
       <p className="text-gray-800">

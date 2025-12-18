@@ -9,8 +9,6 @@ type CountryCardProps = {
   price: string;
 };
 
-const email = "info@dreamwiseconnect.com";
-
 function CountryCard({ name, img, price }: CountryCardProps) {
   return (
     <article className="bg-white border rounded-2xl p-4 shadow-sm hover:shadow-md transition py-10">
@@ -44,8 +42,10 @@ function CountryCard({ name, img, price }: CountryCardProps) {
 
 export default function EuropeVisaPage({
   whatsappNumber,
+  email,
 }: {
   whatsappNumber: string;
+  email: string;
 }): JSX.Element {
   const whatsappMessage = encodeURIComponent(
     "Hi, I would like to know more about World Wide Tour programs. Please assist me."
@@ -109,7 +109,7 @@ export default function EuropeVisaPage({
             <p className="mt-4 text-gray-700 text-sm md:text-base max-w-2xl">
               Planning a trip to Europe?{" "}
               <span className="font-semibold text-blue-600">
-                Dream Wise Connect
+                Dream Wise Global
               </span>{" "}
               helps UAE residents with Schengen and national visas — from
               document preparation to appointment booking and submission.

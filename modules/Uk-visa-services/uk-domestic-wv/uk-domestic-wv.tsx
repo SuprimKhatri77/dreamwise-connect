@@ -3,8 +3,10 @@ import Image from "next/image";
 
 export default function UkDomesticWorkerVisa({
   whatsappNumber,
+  email,
 }: {
   whatsappNumber: string;
+  email: string;
 }) {
   const whatsappMessage = encodeURIComponent(
     "Hi, I would like to know more about UK Domestic Worker Visa programs. Please assist me."
@@ -153,8 +155,8 @@ export default function UkDomesticWorkerVisa({
         <p className="mt-3 text-gray-700 max-w-3xl">
           Send your documents via WhatsApp at{" "}
           <span className="font-semibold">+971502315207</span> or email{" "}
-          <span className="font-semibold">info@dreamwiseconnect.com</span>. Our
-          experts will guide you through the entire process.
+          <span className="font-semibold">{email}</span>. Our experts will guide
+          you through the entire process.
         </p>
       </section>
 

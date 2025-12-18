@@ -3,6 +3,8 @@
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 export default function ContactPage() {
+  const EMAIL = process.env.EMAIL || "Info@dreamwisegroup.com";
+  const WHATSAPP_NUMBER = process.env.WHATSAPP_NUMBER || "+971545129737";
   return (
     <div className="min-h-screen flex flex-col">
       <section className="py-12 md:py-16 bg-linear-to-b from-primary/5 to-background">
@@ -30,7 +32,7 @@ export default function ContactPage() {
                 Email
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                support@dreamwiseconnect.com
+                {EMAIL}
               </p>
             </div>
 
@@ -42,7 +44,7 @@ export default function ContactPage() {
                 Phone
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                +1 (234) 567-8900
+                {WHATSAPP_NUMBER}
               </p>
             </div>
 

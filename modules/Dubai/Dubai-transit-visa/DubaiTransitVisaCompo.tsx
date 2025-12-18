@@ -5,11 +5,13 @@ import Image from "next/image";
 
 export default function DubaiTransitVisaCompo({
   whatsappNumber,
+  EMAIL,
 }: {
   whatsappNumber: string;
+  EMAIL: string;
 }) {
   const phone = whatsappNumber;
-  const email = "info@dreamwiseconnect.com";
+  const email = EMAIL;
 
   const whatsappMessage = encodeURIComponent(
     "Hi, I would like to know more about Dubai Transit Visa program. Please assist me."
@@ -61,8 +63,8 @@ export default function DubaiTransitVisaCompo({
               {/* Bullet Points */}
               <ul className="list-decimal list-inside space-y-2 text-sm md:text-base text-gray-800">
                 <li>
-                  Discover Dubai’s famous attractions like the Burj Khalifa and
-                  Dubai Mall.
+                  Discover Dubai&apos;s famous attractions like the Burj Khalifa
+                  and Dubai Mall.
                 </li>
                 <li>Meet friends or family during your short stopover.</li>
                 <li>
@@ -91,7 +93,7 @@ export default function DubaiTransitVisaCompo({
 
                 <p className="text-sm md:text-base text-gray-800">
                   Get quick and reliable visa assistance with{" "}
-                  <span className="font-semibold">Dream Wise Connect</span>. We
+                  <span className="font-semibold">Dream Wise Global</span>. We
                   provide fast processing for transit visas along with travel
                   insurance—delivered within
                   <span className="font-semibold"> 24 hours</span>.
@@ -108,7 +110,7 @@ export default function DubaiTransitVisaCompo({
                     rel="noopener noreferrer"
                     className="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all text-sm md:text-base"
                   >
-                    Contact Dream Wise Connect
+                    Contact Dream Wise Global
                   </a>
                 </div>
               </div>
@@ -167,8 +169,7 @@ export default function DubaiTransitVisaCompo({
 
           {/* Title */}
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900">
-            Why Choose <span className="text-blue-600">Dream Wise Connect</span>
-            ?
+            Why Choose <span className="text-blue-600">Dream Wise Global</span>?
           </h1>
 
           {/* Benefits Section */}
@@ -344,8 +345,7 @@ export default function DubaiTransitVisaCompo({
             <p className="text-sm md:text-base">
               WhatsApp: <span className="font-semibold">{whatsappNumber}</span>
               <br />
-              Email:{" "}
-              <span className="font-semibold">info@dreamwiseconnect.com</span>
+              Email: <span className="font-semibold">{EMAIL}</span>
               <br />
               We reply to all emails within{" "}
               <span className="font-semibold">1 business hour</span>.
