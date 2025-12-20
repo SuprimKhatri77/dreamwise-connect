@@ -3,6 +3,10 @@ import { Star, Calendar, ArrowRight, TrendingUp, Sparkles } from "lucide-react";
 import Link from "next/link";
 
 export function TrendingVisas({ whatsappNumber }: { whatsappNumber: string }) {
+
+  const safeWhatsAppNumber = whatsappNumber
+    ? whatsappNumber.replace(/\D/g, "")
+    : ""
   const visas = [
     {
       country: "Dubai UAE Visa",
@@ -159,10 +163,7 @@ export function TrendingVisas({ whatsappNumber }: { whatsappNumber: string }) {
                 </p>
 
                 <a
-                  href={`https://wa.me/${whatsappNumber.replace(
-                    /\D/g,
-                    ""
-                  )}?text=${whatsappMessage}`}
+                  href={`https://wa.me/${safeWhatsAppNumber}?text=${whatsappMessage}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
