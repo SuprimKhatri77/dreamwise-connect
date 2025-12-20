@@ -57,7 +57,7 @@ const HelpWidget = () => {
             className="fixed bottom-20 right-6 w-80 rounded-xl shadow-xl bg-white z-50 overflow-hidden"
           >
             {/* Header */}
-            <div className="bg-gray-400 text-white px-4 pb-2 flex justify-between items-center">
+            <div className="bg-gray-400 text-white px-4 pb-2 flex justify-between">
               <div>
                 <Image src={"/dreamwiseglobal-nobg.png"} width={150} height={120} alt='dreamwiseglobal logo' />
                 <p className="text-xs opacity-90">
@@ -66,7 +66,7 @@ const HelpWidget = () => {
               </div>
               <X
                 onClick={() => setOpen(false)}
-                className="cursor-pointer opacity-80 hover:opacity-100"
+                className="mt-5 cursor-pointer opacity-80 hover:opacity-100"
               />
             </div>
 
