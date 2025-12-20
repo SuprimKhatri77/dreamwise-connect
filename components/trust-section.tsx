@@ -33,7 +33,7 @@ export function TrustSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Why Trust Dreamwise Connect?
+            Why Trust Dreamwise Global?
           </h2>
           <div className="w-12 h-1 bg-primary mx-auto rounded-full" />
         </div>

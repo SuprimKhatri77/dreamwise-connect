@@ -12,6 +12,8 @@ export function Navbar() {
   const [mobileUKOpen, setMobileUKOpen] = useState(false);
   const [mobileUSAOpen, setMobileUSAOpen] = useState(false);
   const [mobileTourOpen, setMobileTourOpen] = useState(false);
+  const [mobileAustraliaOpen, setMobileAustraliaOpen] = useState(false);
+  const [mobileEuropeOpen, setMobileEuropeOpen] = useState(false);
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
@@ -20,22 +22,25 @@ export function Navbar() {
     setMobileUSAOpen(false);
     setMobileUKOpen(false);
     setMobileTourOpen(false);
+    setMobileAustraliaOpen(false);
+    setMobileEuropeOpen(false);
   };
 
   return (
     <nav className="bg-white shadow-md fixed top-10  sm:top-10 left-0 right-0 z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-18">
           <div className="shrink-0">
             <Link
               href="/"
               className="text-xl sm:text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors"
             >
               <Image
-                src="/dreamwise-connect.png"
+                src="/dreamwiseglobal-nobg.png"
                 alt="Dreamwise Connect"
-                width={100}
-                height={100}
+                width={160}
+                height={160}
+                className="bg-transparent"
               />
             </Link>
           </div>
@@ -66,10 +71,13 @@ export function Navbar() {
 
               <div className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 -translate-y-2">
                 <div className="relative group/nested">
-                  <button className="w-full text-left px-5 py-3 hover:bg-blue-50 transition-colors flex items-center justify-between text-gray-700 font-medium border-b border-gray-100">
+                  <Link
+                    href="/dubai-visa-services"
+                    className="w-full text-left px-5 py-3 hover:bg-blue-50 transition-colors flex items-center justify-between text-gray-700 font-medium border-b border-gray-100"
+                  >
                     Dubai UAE Visa
                     <ChevronRight className="w-4 h-4" />
-                  </button>
+                  </Link>
 
                   <div className="absolute right-full top-0 mr-1 w-56 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-200">
                     <Link
@@ -84,26 +92,61 @@ export function Navbar() {
                     >
                       Dubai Tour Packages
                     </Link>
+                    <Link
+                      href="/dubai-visa-services"
+                      className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 text-sm border-b border-gray-100"
+                    >
+                      Dubai Visa Services
+                    </Link>
                   </div>
                 </div>
 
-                <Link
-                  href="/australia-visa"
-                  className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 font-medium border-b border-gray-100"
-                >
-                  Australia Visa
-                </Link>
-                <Link
-                  href="/europe-visa"
-                  className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 font-medium border-b border-gray-100"
-                >
-                  Europe Visa
-                </Link>
                 <div className="relative group/nested">
-                  <button className="w-full text-left px-5 py-3 hover:bg-blue-50 transition-colors flex items-center justify-between text-gray-700 font-medium border-b border-gray-100">
+                  <Link
+                    href="/australia-visa"
+                    className="w-full text-left px-5 py-3 hover:bg-blue-50 transition-colors flex items-center justify-between text-gray-700 font-medium border-b border-gray-100"
+                  >
+                    Australia Visa
+                    <ChevronRight className="w-4 h-4" />
+                  </Link>
+
+                  <div className="absolute right-full top-0 mr-1 w-56 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-200">
+                    <Link
+                      href="/australia-visa-services"
+                      className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 text-sm border-b border-gray-100"
+                    >
+                      Australia Visa Services
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="relative group/nested">
+                  <Link
+                    href="/europe-visa"
+                    className="w-full text-left px-5 py-3 hover:bg-blue-50 transition-colors flex items-center justify-between text-gray-700 font-medium border-b border-gray-100"
+                  >
+                    Europe Visa
+                    <ChevronRight className="w-4 h-4" />
+                  </Link>
+
+                  <div className="absolute right-full top-0 mr-1 w-56 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-200">
+                    <Link
+                      href="/europe-visa-services"
+                      className="block px-5 py-3 hover:bg-blue-50 transition-colors text-gray-700 text-sm border-b border-gray-100"
+                    >
+                      Europe Visa Services
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="relative group/nested">
+                  <Link
+                    href="/uk-visa-from-dubai-for-uae-residents"
+                    className="w-full text-left px-5 py-3 hover:bg-blue-50 transition-colors flex items-center justify-between text-gray-700 font-medium border-b border-gray-100"
+                  >
                     UK Visa
                     <ChevronRight className="w-4 h-4" />
-                  </button>
+                  </Link>
 
                   <div className="absolute right-full top-0 mr-1 w-56 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-200">
                     <Link
@@ -121,10 +164,13 @@ export function Navbar() {
                   </div>
                 </div>
                 <div className="relative group/nested">
-                  <button className="w-full text-left px-5 py-3 hover:bg-blue-50 transition-colors flex items-center justify-between text-gray-700 font-medium border-b border-gray-100">
+                  <Link
+                    href="/usa-visa-from-dubai"
+                    className="w-full text-left px-5 py-3 hover:bg-blue-50 transition-colors flex items-center justify-between text-gray-700 font-medium border-b border-gray-100"
+                  >
                     USA Visa
                     <ChevronRight className="w-4 h-4" />
-                  </button>
+                  </Link>
 
                   <div className="absolute right-full top-0 mr-1 w-56 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-200">
                     <Link
@@ -163,10 +209,13 @@ export function Navbar() {
             </div>
 
             <div className="relative group">
-              <button className="flex items-center gap-1 text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link
+                href="/world-wide-tour"
+                className="flex items-center gap-1 text-gray-700 hover:text-blue-600 transition-colors font-medium"
+              >
                 Tour Packages
                 <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
-              </button>
+              </Link>
 
               <div className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 -translate-y-2">
                 <Link
@@ -233,13 +282,13 @@ old text-gray-600"
                 Home
               </Link>
 
-              <a
+              <Link
                 href="/about"
                 className="block px-4 py-3 text-gray-700 hover:bg-blue-50 rounded-lg transition-colors font-medium"
                 onClick={closeMobileMenu}
               >
                 About Us
-              </a>
+              </Link>
 
               <div>
                 <button
@@ -285,24 +334,71 @@ old text-gray-600"
                           >
                             Dubai Tour Packages
                           </Link>
+                          <Link
+                            href="/dubai-visa-services"
+                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
+                            onClick={closeMobileMenu}
+                          >
+                            Dubai Visa Services
+                          </Link>
                         </div>
                       )}
                     </div>
 
-                    <Link
-                      href="/australia-visa"
-                      className="block px-4 py-2 text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Australia Visa
-                    </Link>
-                    <Link
-                      href="/europe-visa"
-                      className="block px-4 py-2 text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Europe Visa
-                    </Link>
+                    <div>
+                      <button
+                        onClick={() =>
+                          setMobileAustraliaOpen(!mobileAustraliaOpen)
+                        }
+                        className="w-full flex items-center justify-between px-4 py-2 text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
+                      >
+                        Australia Visa
+                        <ChevronDown
+                          className={`w-4 h-4 transition-transform ${
+                            mobileDubaiOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+
+                      {mobileAustraliaOpen && (
+                        <div className="ml-4 mt-1 space-y-1">
+                          <Link
+                            href="/australia-visa-services"
+                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
+                            onClick={closeMobileMenu}
+                          >
+                            Australia Visa Service
+                          </Link>
+                        </div>
+                      )}
+                    </div>
+
+                    <div>
+                      <button
+                        onClick={() => setMobileEuropeOpen(!mobileEuropeOpen)}
+                        className="w-full flex items-center justify-between px-4 py-2 text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
+                      >
+                        Europe Visa
+                        <ChevronDown
+                          className={`w-4 h-4 transition-transform ${
+                            mobileEuropeOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+
+                      {mobileEuropeOpen && (
+                        <div className="ml-4 mt-1 space-y-1">
+                          <Link
+                            href="/europe-visa-services"
+                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
+                            onClick={closeMobileMenu}
+                          >
+                            Europe Visa Service
+                          </Link>
+                        </div>
+                      )}
+                    </div>
+
                     <div>
                       <button
                         onClick={() => setMobileUKOpen(!mobileUKOpen)}
@@ -381,6 +477,14 @@ old text-gray-600"
                         </div>
                       )}
                     </div>
+
+                    <Link
+                      href="/citizenship-by-investment"
+                      className="block px-4 py-2 text-gray-600 hover:bg-blue-50 rounded-lg transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      Citizenship By Investment
+                    </Link>
                   </div>
                 )}
               </div>

@@ -4,10 +4,11 @@ import Image from "next/image";
 
 export default function ApplyAustraliaVisaFromDubai({
   whatsappNumber,
+  email,
 }: {
   whatsappNumber: string;
+  email: string;
 }) {
-  const email = "info@dreamwiseconnect.com";
   const whatsappMessage = encodeURIComponent(
     "Hi, I would like to know more about Australia visa and services programs. Please assist me."
   );
@@ -21,7 +22,7 @@ export default function ApplyAustraliaVisaFromDubai({
           <p className="mt-4 text-gray-700 text-sm md:text-base max-w-2xl">
             Planning to visit Australia from Dubai?{" "}
             <span className="font-semibold text-blue-600">
-              Dream Wise Connect
+              Dream Wise Global
             </span>{" "}
             streamlines the visitor visa (Subclass 600) process for UAE
             residents — from online application to biometrics and submission.

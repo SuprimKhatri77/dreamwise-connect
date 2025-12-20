@@ -5,15 +5,16 @@ import React from "react";
 
 export default function ESTAServicePage({
   whatsappNumber,
+  email,
 }: {
   whatsappNumber: string;
+  email: string;
 }) {
   const data = {
     title: "Electronic System For Travel Authorization",
   };
 
   const phone = whatsappNumber;
-  const email = "info@dreamwiseconnect.com";
 
   return (
     <div className="w-full max-w-5xl mx-auto px-3 md:px-5 lg:px-12 space-y-10 text-black py-10">

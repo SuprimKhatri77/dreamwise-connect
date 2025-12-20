@@ -7,7 +7,7 @@ export function AboutUs() {
             <div
               className="w-full h-96 rounded-lg overflow-hidden shadow-xl border border-border"
               style={{
-                backgroundImage: "url(/dreamwise-connect.png)",
+                backgroundImage: "url(/dreamwiseglobal-nobg.png)",
                 backgroundSize: "contain",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
@@ -24,7 +24,7 @@ export function AboutUs() {
             </h2>
 
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              At Dreamwise Connect, we believe that travel should be accessible
+              At Dreamwise Global, we believe that travel should be accessible
               to everyone. With over a decade of experience in visa consultancy,
               we&apos;ve helped thousands of clients achieve their travel
               dreams.

@@ -9,9 +9,6 @@ type CountryCardProps = {
   price: string;
 };
 
-const phone = "+971502315207";
-const email = "info@dreamwiseconnect.com";
-
 function CountryCard({ name, img, price }: CountryCardProps) {
   return (
     <article className="bg-white border rounded-2xl p-4 shadow-sm hover:shadow-md transition py-10">
@@ -43,7 +40,16 @@ function CountryCard({ name, img, price }: CountryCardProps) {
   );
 }
 
-export default function EuropeVisaPage(): JSX.Element {
+export default function EuropeVisaPage({
+  whatsappNumber,
+  email,
+}: {
+  whatsappNumber: string;
+  email: string;
+}): JSX.Element {
+  const whatsappMessage = encodeURIComponent(
+    "Hi, I would like to know more about World Wide Tour programs. Please assist me."
+  );
   const countries = [
     { name: "France", img: "/flags/fc.svg", price: "AED 1,900" },
     { name: "Germany", img: "/flags/gr.svg", price: "AED 1,900" },
@@ -103,7 +109,7 @@ export default function EuropeVisaPage(): JSX.Element {
             <p className="mt-4 text-gray-700 text-sm md:text-base max-w-2xl">
               Planning a trip to Europe?{" "}
               <span className="font-semibold text-blue-600">
-                Dream Wise Connect
+                Dream Wise Global
               </span>{" "}
               helps UAE residents with Schengen and national visas — from
               document preparation to appointment booking and submission.
@@ -251,7 +257,7 @@ export default function EuropeVisaPage(): JSX.Element {
 
           <div className="mt-4 text-gray-700">
             <p>
-              WhatsApp: <strong>{phone}</strong>
+              WhatsApp: <strong>{whatsappNumber}</strong>
               <br />
               Email: <strong>{email}</strong>
             </p>
@@ -290,13 +296,23 @@ export default function EuropeVisaPage(): JSX.Element {
           </p>
           <div className="mt-4 flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="tel:+971502315207"
+              href={`https://wa.me/${whatsappNumber.replace(
+                /\D/g,
+                ""
+              )}?text=${whatsappMessage}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition"
             >
               Call / WhatsApp
             </a>
             <a
-              href="#apply"
+              href={`https://wa.me/${whatsappNumber.replace(
+                /\D/g,
+                ""
+              )}?text=${whatsappMessage}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block border border-gray-200 px-6 py-3 rounded-lg"
             >
               Start Application

@@ -45,12 +45,12 @@ const requiredDocs = [
   "Trade license copy (if business owner/partner)",
 ];
 
-const email = "info@dreamwiseconnect.com";
-
 export default function ApplyUkVisaFromDubai({
   whatsappNumber,
+  email,
 }: {
   whatsappNumber: string;
+  email: string;
 }): JSX.Element {
   const whatsappMessage = encodeURIComponent(
     "Hi, I would like to know more about UK Visa from Dubai programs. Please assist me."
@@ -70,7 +70,7 @@ export default function ApplyUkVisaFromDubai({
               Planning a trip to the United Kingdom from Dubai?
               <span className="font-semibold text-blue-600">
                 {" "}
-                Dream Wise Connect{" "}
+                Dream Wise Global{" "}
               </span>
               simplifies the UK visitor and business visa process for UAE
               residents — from online forms to appointment scheduling and
@@ -398,7 +398,7 @@ export default function ApplyUkVisaFromDubai({
         {/* FOOTER NOTE */}
         <footer className="mt-12 text-sm text-gray-600">
           <p>
-            <strong>Note:</strong> Dream Wise Connect prepares your application
+            <strong>Note:</strong> Dream Wise Global prepares your application
             and schedules VFS appointments. Visa decisions are made by the UK
             Home Office; processing times may vary. All prices shown include our
             service fees and processing handling unless otherwise noted.

@@ -15,8 +15,8 @@ export default function UsaVisaFromDubai() {
           </h1>
           <p className="text-base md:text-lg max-w-3xl mx-auto text-gray-600">
             Planning a trip to the USA from Dubai for tourism, business, or a
-            family visit? DreamWise Connect makes the entire visa process
-            simple, fast, and stress‑free for UAE residents.
+            family visit? DreamWise Global makes the entire visa process simple,
+            fast, and stress‑free for UAE residents.
           </p>
         </div>
 
@@ -138,7 +138,7 @@ export default function UsaVisaFromDubai() {
         {/* Why Choose Us */}
         <section className="mb-20">
           <h2 className="text-xl md:text-2xl font-semibold mb-6 text-black">
-            Why Choose DreamWise Connect?
+            Why Choose DreamWise Global?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="rounded-2xl border-2 border-blue-600 shadow-md p-6 text-gray-700">
@@ -166,7 +166,7 @@ export default function UsaVisaFromDubai() {
             Ready to Start Your USA Visa Application?
           </h3>
           <p className="text-gray-700 max-w-2xl mx-auto mb-6">
-            Contact DreamWise Connect today. Let our visa experts handle every
+            Contact DreamWise Global today. Let our visa experts handle every
             step while you plan your American journey with confidence.
           </p>
           <button className="px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-all">

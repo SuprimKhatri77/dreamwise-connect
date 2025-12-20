@@ -8,7 +8,6 @@ type TourCardProps = {
   img: string;
   number: string;
 };
-const email = "info@dreamwiseconnect.com";
 
 function TourCard({ name, img, number }: TourCardProps) {
   const whatsappNumber = number;
@@ -51,8 +50,10 @@ function TourCard({ name, img, number }: TourCardProps) {
 
 export default function WorldwideTourPage({
   whatsappNumber,
+  email,
 }: {
   whatsappNumber: string;
+  email: string;
 }): JSX.Element {
   const whatsappMessage = encodeURIComponent(
     "Hi, I would like to know more about World Wide Tour programs. Please assist me."
