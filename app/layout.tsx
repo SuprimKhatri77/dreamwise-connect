@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { TopHeader } from "@/components/top-header";
 import { Navbar } from "@/components/navbar";
@@ -40,6 +41,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${_inter.className} antialiased bg-white `}>
+        {/* Google Analytics */}
+        {process.env.NODE_ENV === "production" && (
+          <>
+            <Script
+              src="https://www.googletagmanager.com/gtag/js?id=G-85X2J3CSS1"
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-85X2J3CSS1');
+          `}
+            </Script>
+          </>
+        )}
         <TopHeader whatsappNumber={whatsappNumber} />
         <Navbar />
         <main className="py-20">{children}</main>
