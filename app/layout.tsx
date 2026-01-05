@@ -5,7 +5,8 @@ import "./globals.css";
 import { TopHeader } from "@/components/top-header";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import { StickyContactWidget } from "@/components/sticky-contact-widget";
+// import { StickyContactWidget } from "@/components/sticky-contact-widget";
+import HelpWidget from "@/components/HelpWidget";
 
 const _inter = Inter({ subsets: ["latin"] });
 
@@ -72,8 +73,9 @@ export default function RootLayout({
         <TopHeader whatsappNumber={whatsappNumber} />
         <Navbar />
         <main className="py-20">{children}</main>
+        <HelpWidget />
         <Footer whatsappNumber={whatsappNumber} />
-        <StickyContactWidget whatsappNumber={whatsappNumber} />
+        {/* <StickyContactWidget whatsappNumber={whatsappNumber} /> */}
       </body>
     </html>
   );
