@@ -2,9 +2,10 @@ import UsVisaRenewal from "@/modules/Usa-visa-service/us-visa-renewal/UsVisaRene
 
 export default function page() {
   const whatsappNumber = process.env.WHATSAPP_NUMBER!;
+  const email = process.env.EMAIL!;
   return (
     <>
-      <UsVisaRenewal whatsappNumber={whatsappNumber} />
+      <UsVisaRenewal whatsappNumber={whatsappNumber} email={email} />
     </>
   );
 }

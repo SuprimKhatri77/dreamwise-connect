@@ -5,11 +5,12 @@ import TourCards from "./TourCardsCompo";
 
 export default function DubaiTourPackageCompo({
   whatsappNumber,
+  email,
 }: {
   whatsappNumber: string;
+  email: string;
 }) {
   const phone = whatsappNumber;
-  const email = "info@dreamwiseconnect.com";
   const tips = [
     "Dress comfortably for the desert weather and don’t forget sunscreen and sunglasses.",
     "Keep drinking water throughout the journey to stay hydrated.",
@@ -42,7 +43,6 @@ export default function DubaiTourPackageCompo({
           </div>
         </div>
       </div>
-
 
       {/* Content Section1 */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 2xl:px-32 space-y-10">

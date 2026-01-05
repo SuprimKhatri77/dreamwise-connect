@@ -154,7 +154,7 @@ export default function UkDomesticWorkerVisa({
         <h2 className="text-2xl font-bold text-black">How to Apply</h2>
         <p className="mt-3 text-gray-700 max-w-3xl">
           Send your documents via WhatsApp at{" "}
-          <span className="font-semibold">+971502315207</span> or email{" "}
+          <span className="font-semibold">{whatsappNumber}</span> or email{" "}
           <span className="font-semibold">{email}</span>. Our experts will guide
           you through the entire process.
         </p>

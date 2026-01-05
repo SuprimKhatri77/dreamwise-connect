@@ -17,19 +17,22 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
+        url: "/Logo.jpeg",
         media: "(prefers-color-scheme: light)",
+        href: "/Logo.jpeg",
       },
       {
-        url: "/icon-dark-32x32.png",
+        url: "/Logo.jpeg",
         media: "(prefers-color-scheme: dark)",
+        href: "/Logo.jpeg",
       },
       {
-        url: "/icon.svg",
+        url: "/Logo.jpeg",
         type: "image/svg+xml",
+        href: "/Logo.jpeg",
       },
     ],
-    apple: "/apple-icon.png",
+    apple: "/Logo.png",
   },
 };
 
@@ -39,6 +42,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const whatsappNumber = process.env.WHATSAPP_NUMBER!;
+  const email = process.env.EMAIL!;
+
   return (
     <html lang="en">
       <body className={`${_inter.className} antialiased bg-white `}>
@@ -73,9 +78,9 @@ export default function RootLayout({
         <TopHeader whatsappNumber={whatsappNumber} />
         <Navbar />
         <main className="py-20">{children}</main>
-        <HelpWidget />
-        <Footer whatsappNumber={whatsappNumber} />
+        <Footer whatsappNumber={whatsappNumber} email={email} />
         {/* <StickyContactWidget whatsappNumber={whatsappNumber} /> */}
+        <HelpWidget whatsappNumber={whatsappNumber} />
       </body>
     </html>
   );

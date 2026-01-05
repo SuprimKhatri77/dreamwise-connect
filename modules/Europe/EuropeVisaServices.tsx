@@ -1,13 +1,13 @@
-"use client"
+"use client";
 import Image from "next/image";
 
 export default function EuropeServices() {
   const services = [
     {
-      title: "Sponsor Visa",
+      title: "Visit Visa",
       img: "/img/sponsor-visa.jpg",
       description:
-        "Apply for UAE family sponsor visas for your spouse, children, or parents with complete documentation and quick processing.",
+        "Apply for UAE visit visas for tourism, family visits, or short-term stays with complete documentation and fast, hassle-free processing. We assist you at every step to ensure a smooth and timely approval.",
       price: "From AED 350",
     },
     {
@@ -19,13 +19,12 @@ export default function EuropeServices() {
     },
     {
       title: "Student Visa",
-      img: "/img/visit-visa.jpg",
+      img: "/img/Visit-visa.jpg",
       description:
         "UAE student visa assistance for university and college admissions, including approval, residency stamping, and renewals.",
       price: "From AED 500",
     },
   ];
-
 
   return (
     <div>
@@ -38,7 +37,7 @@ export default function EuropeServices() {
         {/* IMAGE BETWEEN HEADING & PARAGRAPH */}
         <div className="mt-6 flex justify-center">
           <Image
-            src="/img/Eu.jpg"
+            src="/img/eu.jpg"
             alt="Dubai services banner"
             width={800}
             height={400}
@@ -48,7 +47,11 @@ export default function EuropeServices() {
 
         {/* SHORT DESCRIPTION */}
         <p className="text-center mt-6 text-gray-700 max-w-3xl mx-auto text-sm md:text-base leading-relaxed">
-          We provide complete visa assistance for Europe, including Sponsor Visas, Work Visas, and Student Visas. Whether you’re planning to study, work, or reunite with family, our dedicated team ensures a smooth, reliable, and stress-free application process from start to finish.
+          We provide complete visa assistance for Europe, including Sponsor
+          Visas, Work Visas, and Student Visas. Whether you’re planning to
+          study, work, or reunite with family, our dedicated team ensures a
+          smooth, reliable, and stress-free application process from start to
+          finish.
         </p>
 
         {/* SERVICES GRID */}
@@ -79,14 +82,22 @@ export default function EuropeServices() {
             </div>
           ))}
           <div>
-            <a href="http://www.freepik.com" className="text-sm font-light italic hover:text-blue-600">Images Designed by Freepik</a>
+            <a
+              href="http://www.freepik.com"
+              className="text-sm font-light italic hover:text-blue-600"
+            >
+              Images Designed by Freepik
+            </a>
           </div>
         </div>
       </section>
       <section className="max-w-5xl mx-auto px-4 mt-20">
-        <h2 className="text-3xl font-bold text-black text-center">How Our Europe (Schengen) Visa Services Work</h2>
+        <h2 className="text-3xl font-bold text-black text-center">
+          How Our Europe (Schengen) Visa Services Work
+        </h2>
         <p className="text-gray-700 text-center max-w-2xl mx-auto mt-3">
-          A structured and simple process designed to help you apply for your Schengen Tourist Visa with confidence.
+          A structured and simple process designed to help you apply for your
+          Schengen Tourist Visa with confidence.
         </p>
 
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -107,19 +118,31 @@ export default function EuropeServices() {
               desc: "We schedule your VFS appointment, guide you through biometrics, and track your visa status until the decision is issued.",
             },
           ].map((item, index) => (
-            <div key={index} className="p-6 border rounded-lg shadow-sm hover:shadow-xl transition duration-300 bg-white">
-              <div className="text-blue-600 text-4xl font-extrabold">{item.step}</div>
-              <h3 className="mt-3 text-xl font-semibold text-black">{item.title}</h3>
-              <p className="text-gray-700 mt-2 text-sm leading-relaxed">{item.desc}</p>
+            <div
+              key={index}
+              className="p-6 border rounded-lg shadow-sm hover:shadow-xl transition duration-300 bg-white"
+            >
+              <div className="text-blue-600 text-4xl font-extrabold">
+                {item.step}
+              </div>
+              <h3 className="mt-3 text-xl font-semibold text-black">
+                {item.title}
+              </h3>
+              <p className="text-gray-700 mt-2 text-sm leading-relaxed">
+                {item.desc}
+              </p>
             </div>
           ))}
         </div>
       </section>
 
       <section className="max-w-5xl mx-auto px-4 mt-20">
-        <h2 className="text-3xl font-bold text-black">General Document Checklist</h2>
+        <h2 className="text-3xl font-bold text-black">
+          General Document Checklist
+        </h2>
         <p className="text-gray-700 mt-3">
-          Typical requirements for the Schengen Tourist Visa (Europe). Requirements may vary by embassy.
+          Typical requirements for the Schengen Tourist Visa (Europe).
+          Requirements may vary by embassy.
         </p>
 
         <ul className="mt-4 space-y-3 list-disc pl-6 text-gray-700">
@@ -130,14 +153,19 @@ export default function EuropeServices() {
           <li>Last 3–6 months bank statements with sufficient balance</li>
           <li>Confirmed hotel booking or sponsorship proof</li>
           <li>Round-trip flight reservation</li>
-          <li>Travel insurance covering essential medical and emergency needs (required)</li>
+          <li>
+            Travel insurance covering essential medical and emergency needs
+            (required)
+          </li>
           <li>NOC from employer / company or proof of self-employment</li>
           <li>Previous Schengen or travel history (if available)</li>
         </ul>
       </section>
 
       <section className="max-w-5xl mx-auto px-4 mt-20">
-        <h2 className="text-3xl font-bold text-black text-center">Frequently Asked Questions</h2>
+        <h2 className="text-3xl font-bold text-black text-center">
+          Frequently Asked Questions
+        </h2>
 
         <div className="mt-10 space-y-6">
           {[
@@ -169,9 +197,6 @@ export default function EuropeServices() {
           ))}
         </div>
       </section>
-
-
-
     </div>
   );
 }

@@ -6,10 +6,10 @@ import Image from "next/image";
 type CountryCardProps = {
   name: string;
   img: string;
-  price: string;
+  // price: string;
 };
 
-function CountryCard({ name, img, price }: CountryCardProps) {
+function CountryCard({ name, img }: CountryCardProps) {
   return (
     <article className="bg-white border rounded-2xl p-4 shadow-sm hover:shadow-md transition py-10">
       <div className="w-full h-36 relative rounded-lg overflow-hidden">
@@ -22,10 +22,10 @@ function CountryCard({ name, img, price }: CountryCardProps) {
           <p className="text-sm text-gray-600">Schengen / National visa help</p>
         </div>
 
-        <div className="text-right">
+        {/* <div className="text-right">
           <div className="text-sm text-gray-500">From</div>
           <div className="text-blue-600 font-semibold">{price}</div>
-        </div>
+        </div> */}
       </div>
 
       <div className="mt-4 flex gap-2">
@@ -188,12 +188,7 @@ export default function EuropeVisaPage({
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {countries.map((c) => (
-              <CountryCard
-                key={c.name}
-                name={c.name}
-                img={c.img}
-                price={c.price}
-              />
+              <CountryCard key={c.name} name={c.name} img={c.img} />
             ))}
           </div>
         </section>

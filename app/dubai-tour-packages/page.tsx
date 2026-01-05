@@ -2,10 +2,11 @@ import DubaiTourPackageCompo from "@/modules/Dubai/Dubai-tour-packages/DubaiTour
 
 export default function DubaiTourPackage() {
   const whatsappNumber = process.env.WHATSAPP_NUMBER!;
+  const email = process.env.EMAIL!;
   return (
     <>
       <div className="min-h-screen">
-        <DubaiTourPackageCompo whatsappNumber={whatsappNumber} />
+        <DubaiTourPackageCompo whatsappNumber={whatsappNumber} email={email} />
       </div>
     </>
   );

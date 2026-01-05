@@ -3,8 +3,8 @@
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 export default function ContactPage() {
-  const EMAIL = process.env.EMAIL || "Info@dreamwisegroup.com";
-  const WHATSAPP_NUMBER = process.env.WHATSAPP_NUMBER || "+971545129737";
+  const EMAIL = process.env.EMAIL || "dreamwisegroup@gmail.com";
+  const WHATSAPP_NUMBER = process.env.WHATSAPP_NUMBER || "+971522146981";
   const ADDRESS =
     process.env.ADDRESS ||
     "1st floor , Al raffa, Bur Dubai,Devika Business Center Branch";

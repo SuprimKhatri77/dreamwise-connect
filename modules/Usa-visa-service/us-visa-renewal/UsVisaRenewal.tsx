@@ -1,8 +1,13 @@
 "use client";
 
-const UsVisaRenewal = ({ whatsappNumber }: { whatsappNumber: string }) => {
+const UsVisaRenewal = ({
+  whatsappNumber,
+  email,
+}: {
+  whatsappNumber: string;
+  email: string;
+}) => {
   const phone = whatsappNumber;
-  const email = "info@dreamwiseconnect.com";
   const faqs = [
     {
       q: "How long does the renewal process take?",
@@ -141,7 +146,7 @@ const UsVisaRenewal = ({ whatsappNumber }: { whatsappNumber: string }) => {
               <strong>WhatsApp:</strong> {phone}
             </p>
             <p>
-              <strong>Office:</strong> +971 4 2635 888
+              <strong>Office:</strong> {phone}
             </p>
             <p>
               <strong>Email:</strong> {email}

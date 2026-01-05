@@ -4,7 +4,13 @@ import { Phone, Mail, MapPin, X } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-export function Footer({ whatsappNumber }: { whatsappNumber: string }) {
+export function Footer({
+  whatsappNumber,
+  email,
+}: {
+  whatsappNumber: string;
+  email: string;
+}) {
   const [showMap, setShowMap] = useState(false);
   const [mapLoaded, setMapLoaded] = useState(false);
 
@@ -101,16 +107,15 @@ export function Footer({ whatsappNumber }: { whatsappNumber: string }) {
                 >
                   <Phone size={16} />
                   <div>
-                    <p>+971 54 512 9737</p>
-                    <p>+971 50 537 2081</p>
+                    <p>{whatsappNumber}</p>
                   </div>
                 </button>
                 <a
-                  href="mailto:info@dreamwisegroup.com"
+                  href={`mailto:${email}`}
                   className="flex items-center gap-2 hover:text-primary-foreground transition-colors"
                 >
                   <Mail size={16} />
-                  info@dreamwisegroup.com
+                  {email}
                 </a>
                 <button
                   onClick={handleMapClick}

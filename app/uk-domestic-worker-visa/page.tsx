@@ -2,7 +2,7 @@ import UkDomesticWorkerVisa from "@/modules/Uk-visa-services/uk-domestic-wv/uk-d
 
 export default function page() {
   const whatsappNumber = process.env.WHATSAPP_NUMBER!;
-  const email = process.env.EMAIL || "Info@dreamwisegroup.com";
+  const email = process.env.EMAIL || "dreamwisegroup@gmail.com";
   return (
     <>
       <UkDomesticWorkerVisa whatsappNumber={whatsappNumber} email={email} />

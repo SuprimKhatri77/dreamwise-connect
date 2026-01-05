@@ -1,30 +1,25 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'motion/react'
-import { MessageCircle, X } from 'lucide-react'
-import Image from 'next/image'
+import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { MessageCircle, X } from "lucide-react";
+import Image from "next/image";
 
 const advisors = [
   {
-    name: 'Bishal Kunwar',
-    role: 'Business Consultant (English, Urdu, Hindi, Sindhi)',
-    online: true,
+    name: "Dreamwisegroup",
+    // role: "Business Consultant (English, Urdu, Hindi, Sindhi)",
+    // online: true,
   },
-  {
-    name: 'Amit Bhusal',
-    role: 'Business Consultant (English, Hindi, Urdu)',
-    online: true,
-  },
-  {
-    name: 'Suprim Khatri',
-    role: 'Business Consultant (English, Hindi, Urdu)',
-    online: true,
-  },
-]
+];
 
-const HelpWidget = () => {
-  const [open, setOpen] = useState(false)
+const HelpWidget = ({ whatsappNumber }: { whatsappNumber: string }) => {
+  const [open, setOpen] = useState(false);
+
+  const handleWhatsAppClick = (idx: number) => {
+    const number = whatsappNumber.replace(/\D/g, "");
+    window.open(`https://wa.me/${number}`, "_blank");
+  };
 
   return (
     <>
@@ -35,7 +30,7 @@ const HelpWidget = () => {
           className="relative flex items-center gap-3 bg-white rounded-full px-4 py-3 shadow-lg"
         >
           {/* Pulse */}
-          <div className='relative'>
+          <div className="relative">
             <span className="absolute inset-0 rounded-full bg-green-500 opacity-20 animate-ping delay-1000" />
 
             <MessageCircle className="relative z-10 text-green-600" />
@@ -59,9 +54,15 @@ const HelpWidget = () => {
             {/* Header */}
             <div className="bg-gray-400 text-white px-4 pb-2 flex justify-between">
               <div>
-                <Image src={"/dreamwiseglobal-nobg.png"} width={150} height={120} alt='dreamwiseglobal logo' />
+                <Image
+                  src={"/dreamwiseglobal-nobg.png"}
+                  width={150}
+                  height={120}
+                  alt="dreamwiseglobal logo"
+                />
                 <p className="text-xs opacity-90">
-                  Turning Journeys Into Experiences
+                  You can reach out us anytime you want just click on the number
+                  below.
                 </p>
               </div>
               <X
@@ -73,32 +74,42 @@ const HelpWidget = () => {
             {/* Advisors */}
             <div className="max-h-80 overflow-y-auto">
               {advisors.map((a, i) => (
-                <div
+                <button
+                  onClick={() => handleWhatsAppClick(i)}
                   key={i}
-                  className="flex items-center gap-3 px-4 py-3 border-b last:border-none hover:bg-gray-50"
+                  className="flex items-center gap-3 justify-between px-4 py-3 border-b last:border-none hover:bg-gray-100 w-full"
                 >
-                  <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-bold text-slate-700">
-                    {a.name[0]}
-                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-bold text-slate-700">
+                      {a.name[0]}
+                    </div>
 
-                  <div className="flex-1">
-                    <p className="font-semibold text-sm">{a.name}</p>
-                    <p className="text-xs text-gray-500">{a.role}</p>
-                    {a.online && (
+                    <div className="">
+                      <p className="font-semibold text-sm">{a.name}</p>
+                      {/* <p className="text-xs text-gray-500">{a.role}</p> */}
+                      {/* {a.online && (
+                        <span className="text-xs text-green-600 flex items-center gap-1">
+                          <span className="w-2 h-2 rounded-full bg-green-500" />
+                          online
+                        </span>
+                      )} */}
                       <span className="text-xs text-green-600 flex items-center gap-1">
                         <span className="w-2 h-2 rounded-full bg-green-500" />
-                        online
+                        {whatsappNumber}
                       </span>
-                    )}
+                    </div>
                   </div>
-                </div>
+                  <div>
+                    <MessageCircle />
+                  </div>
+                </button>
               ))}
             </div>
           </motion.div>
         )}
       </AnimatePresence>
     </>
-  )
-}
+  );
+};
 
-export default HelpWidget
+export default HelpWidget;
