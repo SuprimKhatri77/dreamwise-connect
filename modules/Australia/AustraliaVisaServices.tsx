@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 
 export default function AustraliaServices() {
@@ -7,25 +7,24 @@ export default function AustraliaServices() {
       title: "Sponsor Visa",
       img: "/img/sponsor-visa.jpg",
       description:
-        "Apply for UAE family sponsor visas for your spouse, children, or parents with complete documentation and quick processing.",
+        "Apply for Australia family sponsor visas for your spouse, children, or parents with complete documentation and fast processing support.",
       price: "From AED 350",
     },
     {
       title: "Work Visa",
       img: "/img/work-visa.jpg",
       description:
-        "Complete UAE employment visa services including work permit, medical tests, Emirates ID, and residency stamping.",
+        "Complete Australia employment visa services including job-related visa assistance, medical tests, Australian ID guidance, and residency processing.",
       price: "From AED 750",
     },
     {
       title: "Student Visa",
-      img: "/img/visit-visa.jpg",
+      img: "/img/Visit-visa.jpg",
       description:
-        "UAE student visa assistance for university and college admissions, including approval, residency stamping, and renewals.",
+        "Australia student visa assistance for university and college admissions, including offer letter support, visa approval, residency process, and renewals.",
       price: "From AED 500",
     },
   ];
-
 
   return (
     <div>
@@ -48,7 +47,11 @@ export default function AustraliaServices() {
 
         {/* SHORT DESCRIPTION */}
         <p className="text-center mt-6 text-gray-700 max-w-3xl mx-auto text-sm md:text-base leading-relaxed">
-          We offer complete visa assistance for Australia, including tourist visas, work visas, sponsor visas, and student visa services. Whether you’re planning to visit, invest, or establish a business, our expert team ensures a smooth, stress-free, and efficient process from start to finish.
+          We offer complete visa assistance for Australia, including tourist
+          visas, work visas, sponsor visas, and student visa services. Whether
+          you’re planning to visit, invest, or establish a business, our expert
+          team ensures a smooth, stress-free, and efficient process from start
+          to finish.
         </p>
 
         {/* SERVICES GRID */}
@@ -78,15 +81,23 @@ export default function AustraliaServices() {
               {/* <p className="mt-4 font-medium text-black">Price: {item.price}</p> */}
             </div>
           ))}
-          <div>
-            <a href="http://www.freepik.com" className="text-sm font-light italic hover:text-blue-600">Images Designed by Freepik</a>
-          </div>
+          {/* <div>
+            <a
+              href="http://www.freepik.com"
+              className="text-sm font-light italic hover:text-blue-600"
+            >
+              Images Designed by Freepik
+            </a>
+          </div> */}
         </div>
       </section>
       <section className="max-w-5xl mx-auto px-4 mt-20">
-        <h2 className="text-3xl font-bold text-black text-center">How Our Australia Visa Services Work</h2>
+        <h2 className="text-3xl font-bold text-black text-center">
+          How Our Australia Visa Services Work
+        </h2>
         <p className="text-gray-700 text-center max-w-2xl mx-auto mt-3">
-          A streamlined process designed to help you apply for your Australia Visitor Visa quickly and confidently.
+          A streamlined process designed to help you apply for your Australia
+          Visitor Visa quickly and confidently.
         </p>
 
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -107,19 +118,31 @@ export default function AustraliaServices() {
               desc: "We manage the visa submission and book your biometrics appointment. You will receive updates until your visa decision is issued.",
             },
           ].map((item, index) => (
-            <div key={index} className="p-6 hover:shadow-xl transition duration-300 border rounded-lg shadow-sm bg-white">
-              <div className="text-blue-600 text-4xl font-extrabold">{item.step}</div>
-              <h3 className="mt-3 text-xl font-semibold text-black">{item.title}</h3>
-              <p className="text-gray-700 mt-2 text-sm leading-relaxed">{item.desc}</p>
+            <div
+              key={index}
+              className="p-6 hover:shadow-xl transition duration-300 border rounded-lg shadow-sm bg-white"
+            >
+              <div className="text-blue-600 text-4xl font-extrabold">
+                {item.step}
+              </div>
+              <h3 className="mt-3 text-xl font-semibold text-black">
+                {item.title}
+              </h3>
+              <p className="text-gray-700 mt-2 text-sm leading-relaxed">
+                {item.desc}
+              </p>
             </div>
           ))}
         </div>
       </section>
 
       <section className="max-w-5xl mx-auto px-4 mt-20">
-        <h2 className="text-3xl font-bold text-black">General Document Checklist</h2>
+        <h2 className="text-3xl font-bold text-black">
+          General Document Checklist
+        </h2>
         <p className="text-gray-700 mt-3">
-          Required documents for the Australia Visitor Visa (Subclass 600) typically include:
+          Required documents for the Australia Visitor Visa (Subclass 600)
+          typically include:
         </p>
 
         <ul className="mt-4 space-y-3 list-disc pl-6 text-gray-700">
@@ -127,7 +150,9 @@ export default function AustraliaServices() {
           <li>UAE residence visa copy (valid 3+ months)</li>
           <li>Recent passport-sized photograph</li>
           <li>Emirates ID copy</li>
-          <li>Bank statements for the last 3–6 months showing sufficient funds</li>
+          <li>
+            Bank statements for the last 3–6 months showing sufficient funds
+          </li>
           <li>Travel itinerary including flight and accommodation details</li>
           <li>NOC from employer or sponsor (if required)</li>
           <li>Previous travel history documents (optional, recommended)</li>
@@ -135,7 +160,9 @@ export default function AustraliaServices() {
       </section>
 
       <section className="max-w-5xl mx-auto px-4 mt-20">
-        <h2 className="text-3xl font-bold text-black text-center">Frequently Asked Questions</h2>
+        <h2 className="text-3xl font-bold text-black text-center">
+          Frequently Asked Questions
+        </h2>
 
         <div className="mt-10 space-y-6">
           {[
@@ -167,7 +194,6 @@ export default function AustraliaServices() {
           ))}
         </div>
       </section>
-
     </div>
   );
 }

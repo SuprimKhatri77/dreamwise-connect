@@ -4,24 +4,24 @@ import Image from "next/image";
 export default function EuropeServices() {
   const services = [
     {
-      title: "Visit Visa",
+      title: "Visit Europe (Schengen) Visa",
       img: "/img/sponsor-visa.jpg",
       description:
-        "Apply for UAE visit visas for tourism, family visits, or short-term stays with complete documentation and fast, hassle-free processing. We assist you at every step to ensure a smooth and timely approval.",
+        "Apply for Schengen Visit Visa for tourism, family visits, business travel, or short-term stays across European countries. We provide complete documentation support and fast, hassle-free processing.",
       price: "From AED 350",
     },
     {
-      title: "Work Visa",
+      title: "Europe Work Visa",
       img: "/img/work-visa.jpg",
       description:
-        "Complete UAE employment visa services including work permit, medical tests, Emirates ID, and residency stamping.",
+        "Complete Europe employment visa services, including job-based work permits, medical tests, embassy documentation, residence permit processing, biometric submission, and residency stamping.",
       price: "From AED 750",
     },
     {
-      title: "Student Visa",
+      title: "Europe Student Visa",
       img: "/img/Visit-visa.jpg",
       description:
-        "UAE student visa assistance for university and college admissions, including approval, residency stamping, and renewals.",
+        "Comprehensive Europe student visa assistance for admission into universities and colleges across Schengen countries. Our services include university selection, application support, offer letters, visa approval, residence permit stamping, and renewals — ensuring a smooth academic journey in Europe",
       price: "From AED 500",
     },
   ];
