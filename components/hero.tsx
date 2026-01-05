@@ -9,7 +9,7 @@ export function Hero() {
         style={{
           backgroundImage: "url(/hero-img.jpeg)",
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "top",
         }}
       />
 
