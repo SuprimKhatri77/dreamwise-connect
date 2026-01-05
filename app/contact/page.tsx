@@ -3,7 +3,7 @@
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 export default function ContactPage() {
-  const EMAIL = process.env.EMAIL || "dreamwisegroup@gmail.com";
+  const EMAIL = process.env.EMAIL || "info@dreamwisegroup.com";
   const WHATSAPP_NUMBER = process.env.WHATSAPP_NUMBER || "+971522146981";
   const ADDRESS =
     process.env.ADDRESS ||
