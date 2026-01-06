@@ -1,0 +1,17 @@
+import { auth } from "@/utils/auth";
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
+
+export default async function Page() {
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+
+  if (!session) redirect("/");
+  if (!session.user.role || session.user.role !== "admin") redirect("/");
+  return (
+    <div>
+      <h1>Hello admin</h1>
+    </div>
+  );
+}
