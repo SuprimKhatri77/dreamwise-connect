@@ -1,4 +1,4 @@
-import { db } from "@/db";
+import { getAllBlogs } from "@/dal/blogs/get-all-blogs";
 import BlogsFeed from "@/modules/Blogs/BlogFeed";
 
 // export const blogs: Blog[] = [
@@ -33,6 +33,6 @@ import BlogsFeed from "@/modules/Blogs/BlogFeed";
 // ];
 
 export default async function HomePage() {
-  const blogLists = await db.query.blogs.findMany();
+  const blogLists = await getAllBlogs();
   return <BlogsFeed blogs={blogLists} />;
 }
