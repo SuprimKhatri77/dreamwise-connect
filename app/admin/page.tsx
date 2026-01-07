@@ -9,9 +9,6 @@ export default async function Page() {
 
   if (!session) redirect("/");
   if (!session.user.role || session.user.role !== "admin") redirect("/");
-  return (
-    <div>
-      <h1>Hello admin</h1>
-    </div>
-  );
+
+  redirect("/admin/blogs");
 }

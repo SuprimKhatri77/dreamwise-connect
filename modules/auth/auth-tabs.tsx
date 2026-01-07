@@ -68,7 +68,7 @@ export default function AuthTabs() {
   };
 
   const handleSignin = async () => {
-    setIsSigningup(true);
+    setIsLoggingin(true);
 
     try {
       const result = await signin(signinFormData);
@@ -77,14 +77,14 @@ export default function AuthTabs() {
         if (result.errors) {
           setSigninErrors(result.errors);
         }
-        setIsSigningup(false);
+        setIsLoggingin(false);
         return;
       }
       toast.success(result.message);
       setSigninErrorMessage("");
       setSigninErrors({});
       setSigninFormData({ email: "", password: "" });
-      router.replace("/admin");
+      router.replace("/admin/blogs");
     } finally {
       setIsLoggingin(false);
     }

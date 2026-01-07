@@ -38,7 +38,7 @@ export default function CreateBlogPage() {
 
   const handleSubmit = async () => {
     if (!formData.title || !formData.description) {
-      alert("Please fill in all required fields");
+      toast.warning("Please fill in all required fields");
       return;
     }
 
