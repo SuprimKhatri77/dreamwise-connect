@@ -541,7 +541,7 @@ old text-gray-600"
                   className="block px-4 py-3 text-gray-700 hover:bg-blue-50 rounded-lg transition-colors font-medium"
                   onClick={closeMobileMenu}
                 >
-                  Contact Us
+                  Blogs
                 </Link>
               </div>
             </div>
