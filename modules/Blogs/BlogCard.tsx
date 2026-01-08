@@ -9,7 +9,7 @@ interface BlogCardProps {
 export default function BlogCard({ blog }: BlogCardProps) {
   return (
     <article className="flex flex-col gap-4 pb-10 border-b border-gray-200">
-      {blog.images && (
+      {blog.images && blog.images.length > 0 && (
         <div className="relative w-full h-[260px] overflow-hidden">
           <BlogImages title={blog.title} images={blog.images} />
         </div>
