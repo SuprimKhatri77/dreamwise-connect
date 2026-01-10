@@ -47,7 +47,7 @@ export function TopHeader({ whatsappNumber }: { whatsappNumber: string }) {
             </a>
 
             <a
-              href="https://www.instagram.com/dreamwisegroup"
+              href="https://www.instagram.com/groupdreamwise"
               className="hover:opacity-80 transition-opacity"
               aria-label="Instagram"
             >
