@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import { TopHeader } from "@/components/top-header";
-import { Navbar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
+// import { TopHeader } from "@/components/top-header";
+// import { Navbar } from "@/components/navbar";
+// import { Footer } from "@/components/footer";
+// import HelpWidget from "@/components/HelpWidget";
 // import { StickyContactWidget } from "@/components/sticky-contact-widget";
-import HelpWidget from "@/components/HelpWidget";
 import { Toaster } from "@/components/ui/sonner";
-import LayoutMainWrapper from "@/components/main-layout-wrapper";
+// import LayoutMainWrapper from "@/components/main-layout-wrapper";
 
 const _inter = Inter({ subsets: ["latin"] });
 
@@ -43,8 +43,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const whatsappNumber = process.env.WHATSAPP_NUMBER!;
-  const email = process.env.EMAIL!;
+  // const whatsappNumber = process.env.WHATSAPP_NUMBER!;
+  // const email = process.env.EMAIL!;
 
   return (
     <html lang="en">
@@ -77,13 +77,23 @@ export default function RootLayout({
             </noscript>
           </>
         )}
-        <TopHeader whatsappNumber={whatsappNumber} />
-        <Navbar />
+        <main className="min-h-screen w-full flex items-center justify-center bg-gray-950 text-white px-6">
+          <div className="text-center max-w-lg space-y-6">
+            <h1 className="text-6xl font-bold tracking-tight">Coming Soon</h1>
+            <div className="h-px bg-gray-800 w-full" />
+            <p className="text-gray-400 text-lg leading-relaxed">
+              We are currently working on something great. Our website will be
+              live shortly. Stay tuned.
+            </p>
+          </div>
+        </main>
+        {/* <TopHeader whatsappNumber={whatsappNumber} /> */}
+        {/* <Navbar /> */}
 
-        <LayoutMainWrapper>{children}</LayoutMainWrapper>
-        <Footer whatsappNumber={whatsappNumber} email={email} />
+        {/* <LayoutMainWrapper>{children}</LayoutMainWrapper> */}
+        {/* <Footer whatsappNumber={whatsappNumber} email={email} /> */}
         {/* <StickyContactWidget whatsappNumber={whatsappNumber} /> */}
-        <HelpWidget whatsappNumber={whatsappNumber} />
+        {/* <HelpWidget whatsappNumber={whatsappNumber} /> */}
 
         <Toaster />
       </body>
