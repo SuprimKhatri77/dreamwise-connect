@@ -30,7 +30,7 @@ export default function AboutPage() {
               <div
                 className="w-full h-96 rounded-lg overflow-hidden shadow-lg border border-border"
                 style={{
-                  backgroundImage: "url(/dreamwiseglobal-nobg.png)",
+                  backgroundImage: "url(/new-logo-no-bg.png)",
                   backgroundSize: "contain",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",

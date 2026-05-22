@@ -69,7 +69,7 @@ export function Footer({
 
       const map = L.map("leaflet-map").setView(
         [location.lat, location.lng],
-        15
+        15,
       );
 
       L.tileLayer(
@@ -78,7 +78,7 @@ export function Footer({
           attribution:
             '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
           maxZoom: 20,
-        }
+        },
       ).addTo(map);
 
       const marker = L.marker([location.lat, location.lng]).addTo(map);
@@ -259,7 +259,7 @@ export function Footer({
                 <h4 className="font-semibold mb-4">Follow Us</h4>
                 <div className="flex gap-4">
                   <a
-                    href="https://www.facebook.com/dreamwisegroup"
+                    href="https://www.facebook.com/dreamwisehrconsultancy"
                     target="_blank"
                     className="inline-block p-2 hover:bg-primary-foreground/20 rounded-lg transition-colors"
                   >
@@ -277,7 +277,7 @@ export function Footer({
                   </a>
 
                   <a
-                    href="https://www.instagram.com/groupdreamwise"
+                    href="https://www.instagram.com/dreamwisehrconsultancy"
                     target="_blank"
                     className="inline-block p-2 hover:bg-primary-foreground/20 rounded-lg transition-colors"
                   >

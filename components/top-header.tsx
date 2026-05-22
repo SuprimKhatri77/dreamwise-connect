@@ -15,7 +15,7 @@ export function TopHeader({ whatsappNumber }: { whatsappNumber: string }) {
     !pathname.startsWith("/admin") && (
       <div
         className={cn(
-          "bg-black fixed top-0 w-full text-primary-foreground py-4 px-4 sm:px-6 lg:px-8 z-40"
+          "bg-black fixed top-0 w-full text-primary-foreground py-4 px-4 sm:px-6 lg:px-8 z-40",
         )}
       >
         <div className="max-w-7xl mx-auto flex  sm:flex-row items-center justify-between gap-3 sm:gap-0 text-sm">
@@ -29,7 +29,8 @@ export function TopHeader({ whatsappNumber }: { whatsappNumber: string }) {
 
           <div className="flex items-center gap-4">
             <a
-              href="https://www.facebook.com/dreamwisegroup"
+              target="_blank"
+              href="https://www.facebook.com/dreamwisehrconsultancy"
               className="hover:opacity-80 transition-opacity"
               aria-label="Facebook"
             >
@@ -47,7 +48,8 @@ export function TopHeader({ whatsappNumber }: { whatsappNumber: string }) {
             </a>
 
             <a
-              href="https://www.instagram.com/groupdreamwise"
+              target="_blank"
+              href="https://www.instagram.com/dreamwisehrconsultancy"
               className="hover:opacity-80 transition-opacity"
               aria-label="Instagram"
             >
@@ -64,7 +66,8 @@ export function TopHeader({ whatsappNumber }: { whatsappNumber: string }) {
               </svg>
             </a>
             <a
-              href="https://www.tiktok.com/@dreamwisegroup"
+              target="_blank"
+              href="https://www.tiktok.com/@dreamwisehrconsultancy"
               className="hover:opacity-80 transition-opacity"
               aria-label="Tiktok"
             >

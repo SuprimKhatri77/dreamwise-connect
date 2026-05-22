@@ -24,14 +24,13 @@ export function Hero() {
           Fast and reliable visa services combined with premium travel packages
           designed for your journey
         </p>
-        <Link href="/visa-and-services">
-          <Button
-            size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8"
-          >
-            Show Packages
-          </Button>
-        </Link>
+        <Button
+          asChild
+          size="lg"
+          className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8"
+        >
+          <Link href="/visa-and-services">Show Packages</Link>
+        </Button>
       </div>
     </section>
   );

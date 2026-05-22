@@ -33,21 +33,21 @@ export function Navbar() {
     !pathname.startsWith("/admin") && (
       <nav
         className={cn(
-          "bg-white shadow-md fixed top-10  sm:top-10 left-0 right-0 z-40"
+          "bg-white shadow-md fixed top-10  sm:top-10 left-0 right-0 z-40",
         )}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-18">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+          <div className="flex items-center justify-between h-20">
             <div className="shrink-0">
               <Link
                 href="/"
                 className="text-xl sm:text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors"
               >
                 <Image
-                  src="/dreamwiseglobal-nobg.png"
+                  src="/new-logo-no-bg.png"
                   alt="Dreamwise Connect"
-                  width={160}
-                  height={160}
+                  width={140}
+                  height={140}
                   className="bg-transparent"
                 />
               </Link>

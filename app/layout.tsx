@@ -5,9 +5,10 @@ import "./globals.css";
 import { TopHeader } from "@/components/top-header";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-// import { StickyContactWidget } from "@/components/sticky-contact-widget";
 import HelpWidget from "@/components/HelpWidget";
+// import { StickyContactWidget } from "@/components/sticky-contact-widget";
 import { Toaster } from "@/components/ui/sonner";
+// import Image from "next/image";
 import LayoutMainWrapper from "@/components/main-layout-wrapper";
 
 const _inter = Inter({ subsets: ["latin"] });
@@ -19,22 +20,22 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/Logo.jpeg",
+        url: "/new-favicon.png",
         media: "(prefers-color-scheme: light)",
-        href: "/Logo.jpeg",
+        href: "/new-favicon.png",
       },
       {
-        url: "/Logo.jpeg",
+        url: "/new-favicon.png",
         media: "(prefers-color-scheme: dark)",
-        href: "/Logo.jpeg",
+        href: "/new-favicon.png",
       },
       {
-        url: "/Logo.jpeg",
+        url: "/new-favicon.png",
         type: "image/svg+xml",
-        href: "/Logo.jpeg",
+        href: "/new-favicon.png",
       },
     ],
-    apple: "/Logo.png",
+    apple: "/new-favicon.png",
   },
 };
 
@@ -77,6 +78,63 @@ export default function RootLayout({
             </noscript>
           </>
         )}
+        {/* <main className="min-h-screen w-full flex items-center justify-center bg-gray-50 text-gray-900 px-6 py-16">
+          <div className="max-w-2xl w-full space-y-8">
+            <Image
+              src="/dreamwiseglobal.jpeg"
+              alt="Dream Wise Group"
+              width={240}
+              height={80}
+              priority
+            />
+
+            <div className="space-y-3">
+              <h1 className="text-5xl font-bold tracking-tight">
+                We Are Coming Soon
+              </h1>
+              <div className="h-px bg-gray-300 w-full" />
+            </div>
+
+            <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
+              <p>
+                We are currently working on something big to serve you better.
+                Dream Wise Group is preparing to launch a complete range of
+                professional services designed to support individuals and
+                businesses worldwide.
+              </p>
+              <p>
+                At Dream Wise Group, we focus on delivering reliable, efficient,
+                and result-driven solutions across multiple industries. Our goal
+                is to provide quality services with trust, innovation, and
+                excellence.
+              </p>
+            </div>
+
+            <div className="space-y-3 bg-white rounded-2xl px-8 py-6 border border-gray-200 shadow-sm">
+              <p className="text-gray-900 font-semibold text-sm uppercase tracking-widest">
+                Group Companies
+              </p>
+              <ul className="space-y-2 text-gray-600">
+                {[
+                  "Dream Wise HR Consultancy",
+                  "Dream Wise Management Services",
+                  "Dream Wise Consultant Services",
+                  "Dream Wise Travel & Tours",
+                  "Dream Wise IT Services",
+                ].map((company) => (
+                  <li key={company} className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500 inline-block" />
+                    {company}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <p className="text-gray-400 text-sm">
+              Stay connected with us — something great is on the way.
+            </p>
+          </div>
+        </main> */}
         <TopHeader whatsappNumber={whatsappNumber} />
         <Navbar />
 
