@@ -58,7 +58,7 @@ const HelpWidget = ({ whatsappNumber }: { whatsappNumber: string }) => {
               <div className="bg-gray-400 text-white px-4 pb-2 flex justify-between">
                 <div>
                   <Image
-                    src={"/dreamwiseglobal-nobg.png"}
+                    src={"/new-logo-no-bg.png"}
                     width={150}
                     height={120}
                     alt="dreamwiseglobal logo"

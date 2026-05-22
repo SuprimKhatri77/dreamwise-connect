@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-// import { TopHeader } from "@/components/top-header";
-// import { Navbar } from "@/components/navbar";
-// import { Footer } from "@/components/footer";
-// import HelpWidget from "@/components/HelpWidget";
+import { TopHeader } from "@/components/top-header";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+import HelpWidget from "@/components/HelpWidget";
 // import { StickyContactWidget } from "@/components/sticky-contact-widget";
 import { Toaster } from "@/components/ui/sonner";
-import Image from "next/image";
-// import LayoutMainWrapper from "@/components/main-layout-wrapper";
+// import Image from "next/image";
+import LayoutMainWrapper from "@/components/main-layout-wrapper";
 
 const _inter = Inter({ subsets: ["latin"] });
 
@@ -20,22 +20,22 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/Logo.jpeg",
+        url: "/new-favicon.png",
         media: "(prefers-color-scheme: light)",
-        href: "/Logo.jpeg",
+        href: "/new-favicon.png",
       },
       {
-        url: "/Logo.jpeg",
+        url: "/new-favicon.png",
         media: "(prefers-color-scheme: dark)",
-        href: "/Logo.jpeg",
+        href: "/new-favicon.png",
       },
       {
-        url: "/Logo.jpeg",
+        url: "/new-favicon.png",
         type: "image/svg+xml",
-        href: "/Logo.jpeg",
+        href: "/new-favicon.png",
       },
     ],
-    apple: "/Logo.png",
+    apple: "/new-favicon.png",
   },
 };
 
@@ -44,8 +44,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // const whatsappNumber = process.env.WHATSAPP_NUMBER!;
-  // const email = process.env.EMAIL!;
+  const whatsappNumber = process.env.WHATSAPP_NUMBER!;
+  const email = process.env.EMAIL!;
 
   return (
     <html lang="en">
@@ -78,9 +78,8 @@ export default function RootLayout({
             </noscript>
           </>
         )}
-        <main className="min-h-screen w-full flex items-center justify-center bg-gray-50 text-gray-900 px-6 py-16">
+        {/* <main className="min-h-screen w-full flex items-center justify-center bg-gray-50 text-gray-900 px-6 py-16">
           <div className="max-w-2xl w-full space-y-8">
-            {/* Logo */}
             <Image
               src="/dreamwiseglobal.jpeg"
               alt="Dream Wise Group"
@@ -111,7 +110,6 @@ export default function RootLayout({
               </p>
             </div>
 
-            {/* Companies */}
             <div className="space-y-3 bg-white rounded-2xl px-8 py-6 border border-gray-200 shadow-sm">
               <p className="text-gray-900 font-semibold text-sm uppercase tracking-widest">
                 Group Companies
@@ -136,14 +134,14 @@ export default function RootLayout({
               Stay connected with us — something great is on the way.
             </p>
           </div>
-        </main>
-        {/* <TopHeader whatsappNumber={whatsappNumber} /> */}
-        {/* <Navbar /> */}
+        </main> */}
+        <TopHeader whatsappNumber={whatsappNumber} />
+        <Navbar />
 
-        {/* <LayoutMainWrapper>{children}</LayoutMainWrapper> */}
-        {/* <Footer whatsappNumber={whatsappNumber} email={email} /> */}
+        <LayoutMainWrapper>{children}</LayoutMainWrapper>
+        <Footer whatsappNumber={whatsappNumber} email={email} />
         {/* <StickyContactWidget whatsappNumber={whatsappNumber} /> */}
-        {/* <HelpWidget whatsappNumber={whatsappNumber} /> */}
+        <HelpWidget whatsappNumber={whatsappNumber} />
 
         <Toaster />
       </body>
